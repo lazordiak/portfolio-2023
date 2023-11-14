@@ -1,12 +1,26 @@
 import HomeShader from "@/shaders/HomeShader";
 import styles from "@/styles/Home.module.css";
 import { shaderContainerStyle } from "@/styles/constants";
+import { useEffect, useState } from "react";
 
 export const HomeScreen = () => {
+  const [nameFaded, setNameFaded] = useState(false);
+  const [infoFaded, setInfoFaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setNameFaded(true), 6000);
+  }, []);
+
+  useEffect(() => {
+    if (nameFaded) {
+      setTimeout(() => setInfoFaded(true), 3000);
+    }
+  }, [nameFaded]);
+
   return (
     <>
       <main className={styles.main}>
-        <div className="font-serif minion-3 text-white justify-center items-center">
+        <div className="font-serif minion-3 text-white lg:text-9xl sm:text-3xl">
           <div className="text-center">
             <span className="opacity-0 animate-fade-in [--fade-delay:1000ms]">
               S
@@ -53,9 +67,7 @@ export const HomeScreen = () => {
         </div>
       </main>
 
-      <div className={shaderContainerStyle}>
-        <HomeShader />
-      </div>
+      <div className={shaderContainerStyle}>{nameFaded && <HomeShader />}</div>
     </>
   );
 };

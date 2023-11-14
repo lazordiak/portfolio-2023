@@ -2,17 +2,11 @@ import Head from "next/head";
 
 import { useShaderUpdater } from "@/hooks/useKeyDown";
 import { useState } from "react";
-import LiquidShader from "@/shaders/LiquidShader";
-import JournalsShader from "@/shaders/JournalsShader";
-import WeatherShader from "@/shaders/WeatherShader";
-import ThesisShader from "@/shaders/ThesisShader";
-import { HomeScreen } from "@/screens/HomeScreen";
-import { LiquidScreen } from "@/screens/LiquidScreen";
-import { JournalsScreen } from "@/screens/JournalsScreen";
-import { WeatherScreen } from "@/screens/WeatherScreen";
-import { ThesisScreen } from "@/screens/ThesisScreen";
-
-const shaderContainerStyle = "absolute w-screen h-screen -z-50";
+import { HomeScreen } from "@/components/screens/HomeScreen";
+import { LiquidScreen } from "@/components/screens/LiquidScreen";
+import { JournalsScreen } from "@/components/screens/JournalsScreen";
+import { WeatherScreen } from "@/components/screens/WeatherScreen";
+import { ThesisScreen } from "@/components/screens/ThesisScreen";
 
 export default function Home() {
   const [shaderIndex, setShaderIndex] = useState(0);
