@@ -1,12 +1,16 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-import HomeShader from "@/shaders/HomeShader";
+
 import { useShaderUpdater } from "@/hooks/useKeyDown";
 import { useState } from "react";
 import LiquidShader from "@/shaders/LiquidShader";
 import JournalsShader from "@/shaders/JournalsShader";
 import WeatherShader from "@/shaders/WeatherShader";
 import ThesisShader from "@/shaders/ThesisShader";
+import { HomeScreen } from "@/screens/HomeScreen";
+import { LiquidScreen } from "@/screens/LiquidScreen";
+import { JournalsScreen } from "@/screens/JournalsScreen";
+import { WeatherScreen } from "@/screens/WeatherScreen";
+import { ThesisScreen } from "@/screens/ThesisScreen";
 
 const shaderContainerStyle = "absolute w-screen h-screen -z-50";
 
@@ -23,81 +27,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/pke4uus.css" />
       </Head>
-      {shaderIndex === 0 && (
-        <>
-          <main className={styles.main}>
-            <div className="font-serif minion-3 text-white justify-center items-center">
-              <div className="text-center">
-                <span className="opacity-0 animate-fade-in [--fade-delay:1000ms]">
-                  S
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:1500ms]">
-                  c
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:700ms]">
-                  h
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:2000ms]">
-                  u
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:500ms]">
-                  y
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:2500ms]">
-                  l
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:3000ms]">
-                  e
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:650ms]">
-                  r
-                </span>
-              </div>
-              <div className="text-center">
-                <span className="opacity-0 animate-fade-in [--fade-delay:300ms]">
-                  d
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:1500ms]">
-                  e
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:1000ms]">
-                  V
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:2700ms]">
-                  o
-                </span>
-                <span className="opacity-0 animate-fade-in [--fade-delay:1700ms]">
-                  s
-                </span>
-              </div>
-            </div>
-          </main>
-
-          <div className={shaderContainerStyle}>
-            <HomeShader />
-          </div>
-        </>
-      )}
-      {shaderIndex === 1 && (
-        <div className={shaderContainerStyle}>
-          <LiquidShader />
-        </div>
-      )}
-      {shaderIndex === 2 && (
-        <div className={shaderContainerStyle}>
-          <JournalsShader />
-        </div>
-      )}
-      {shaderIndex === 3 && (
-        <div className={shaderContainerStyle}>
-          <WeatherShader />
-        </div>
-      )}
-      {shaderIndex === 4 && (
-        <div className={shaderContainerStyle}>
-          <ThesisShader />
-        </div>
-      )}
+      {shaderIndex === 0 && <HomeScreen />}
+      {shaderIndex === 1 && <LiquidScreen />}
+      {shaderIndex === 2 && <JournalsScreen />}
+      {shaderIndex === 3 && <WeatherScreen />}
+      {shaderIndex === 4 && <ThesisScreen />}
     </>
   );
 }
