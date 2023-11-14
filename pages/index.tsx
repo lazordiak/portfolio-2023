@@ -1,9 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { Surface } from "gl-react-dom";
-import { HelloBlue, TestShader } from "@/shaders/TestShader";
 import HomeShader from "@/shaders/HomeShader";
 import { useShaderUpdater } from "@/hooks/useKeyDown";
 import { useState } from "react";
@@ -102,9 +98,6 @@ export default function Home() {
           <ThesisShader />
         </div>
       )}
-      {/*<Surface width={1800} height={1200}>
-        <TestShader />
-  </Surface>*/}
     </>
   );
 }
