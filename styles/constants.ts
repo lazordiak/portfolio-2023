@@ -1,1 +1,2 @@
-export const shaderContainerStyle = "absolute w-screen h-screen -z-50";
+export const shaderContainerStyle =
+  "absolute overflow-hidden w-screen h-screen -z-50";
