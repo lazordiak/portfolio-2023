@@ -1,9 +1,14 @@
-import { useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "./reduxHooks";
+import { setToLoaded } from "@/store/slice";
+import { ThunkDispatch } from "@reduxjs/toolkit";
 
-export const useShaderUpdater = (shaderIndex: number, setShaderIndex): void => {
+export const useShaderUpdater = (
+  shaderIndex: number,
+  setShaderIndex: Dispatch<SetStateAction<number>>
+): void => {
   useEffect(() => {
     const onKeyDown = (event) => {
-      console.log("index is ", shaderIndex);
       const GoingUp = event.key === "ArrowRight";
       const GoingDown = event.key === "ArrowLeft";
       if (GoingUp) {

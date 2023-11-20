@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import { useShaderUpdater } from "@/hooks/useKeyDown";
 import { useState } from "react";
 import { HomeScreen } from "@/components/screens/HomeScreen";
@@ -7,6 +6,8 @@ import { LiquidScreen } from "@/components/screens/LiquidScreen";
 import { JournalsScreen } from "@/components/screens/JournalsScreen";
 import { WeatherScreen } from "@/components/screens/WeatherScreen";
 import { ThesisScreen } from "@/components/screens/ThesisScreen";
+import { Provider } from "react-redux";
+import { store } from "@/store/store";
 
 export default function Home() {
   const [shaderIndex, setShaderIndex] = useState(0);
@@ -21,11 +22,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/pke4uus.css" />
       </Head>
-      {shaderIndex === 0 && <HomeScreen />}
-      {shaderIndex === 1 && <LiquidScreen />}
-      {shaderIndex === 2 && <JournalsScreen />}
-      {shaderIndex === 3 && <WeatherScreen />}
-      {shaderIndex === 4 && <ThesisScreen />}
+      <Provider store={store}>
+        {shaderIndex === 0 && <HomeScreen />}
+        {shaderIndex === 1 && <LiquidScreen />}
+        {shaderIndex === 2 && <JournalsScreen />}
+        {shaderIndex === 3 && <WeatherScreen />}
+        {shaderIndex === 4 && <ThesisScreen />}
+      </Provider>
     </>
   );
 }
