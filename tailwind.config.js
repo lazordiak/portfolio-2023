@@ -29,7 +29,7 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in": "fade-in 3s linear var(--fade-delay) forwards",
+        "fade-in": "fade-in 1.5s linear var(--fade-delay) forwards",
       },
     },
   },

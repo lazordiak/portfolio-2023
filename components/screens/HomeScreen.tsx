@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 export const HomeScreen = () => {
   const [nameFaded, setNameFaded] = useState(false);
-  const [infoFaded, setInfoFaded] = useState(false);
   const hasLoaded = useAppSelector((state) => state.hasLoaded);
   const dispatch = useAppDispatch();
 
@@ -18,24 +17,20 @@ export const HomeScreen = () => {
   });
 
   useEffect(() => {
-    if (!hasLoaded) {
-      if (!nameFaded) {
-        setTimeout(() => setNameFaded(true), 6000);
-      } else if (!infoFaded) {
-        setTimeout(() => setInfoFaded(true), 3000);
-      }
+    if (!hasLoaded && !nameFaded) {
+      setTimeout(() => setNameFaded(true), 4500);
     } else {
       setNameFaded(true);
     }
-  }, [hasLoaded, nameFaded, infoFaded, dispatch]);
+  }, [hasLoaded, nameFaded, dispatch]);
 
   return (
     <>
       <main className="absolute p-24 flex w-screen h-screen justify-center lg:justify-normal lg:items-center">
-        <div className="font-serif minion-3 text-white text-4xl lg:text-9xl">
+        <div className="font-serif minion-3 text-white">
           {!hasLoaded ? (
             <>
-              <div className="text-center">
+              <div className="text-center lg:text-left text-4xl lg:text-9xl">
                 <span className="opacity-0 animate-fade-in [--fade-delay:1000ms]">
                   S
                 </span>
@@ -61,7 +56,7 @@ export const HomeScreen = () => {
                   r
                 </span>
               </div>
-              <div className="text-center">
+              <div className="text-center mb-4 lg:text-left text-4xl lg:text-9xl">
                 <span className="opacity-0 animate-fade-in [--fade-delay:300ms]">
                   d
                 </span>
@@ -78,10 +73,16 @@ export const HomeScreen = () => {
                   s
                 </span>
               </div>
+              <div className="text-center mb-4 lg:text-left lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
+                Web developer, creative technologist.
+              </div>
+              <div className="text-center lg:text-left lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
+                : )
+              </div>
             </>
           ) : (
             <>
-              <div className="text-center">
+              <div className="text-center lg:text-left text-4xl lg:text-9xl">
                 <span>S</span>
                 <span>c</span>
                 <span>h</span>
@@ -91,12 +92,18 @@ export const HomeScreen = () => {
                 <span>e</span>
                 <span>r</span>
               </div>
-              <div className="text-center">
+              <div className="text-center mb-4 lg:text-left text-4xl lg:text-9xl">
                 <span>d</span>
                 <span>e</span>
                 <span>V</span>
                 <span>o</span>
                 <span>s</span>
+              </div>
+              <div className="text-center mt-4 lg:text-left lg:text-xl">
+                Web developer, creative technologist.
+              </div>
+              <div className="text-center mt-4 lg:text-left lg:text-xl">
+                : )
               </div>
             </>
           )}
