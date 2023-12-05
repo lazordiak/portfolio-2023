@@ -22,6 +22,12 @@ module.exports = {
       serif: ["minion-3"],
     },
     extend: {
+      colors: {
+        moonstone: "#3AABC5",
+        snow: "#FFFBFA",
+        eerieblack: "#1D201F",
+        ferngreen: "#568259",
+      },
       keyframes: {
         "fade-in": {
           "0%": { opacity: 0 },

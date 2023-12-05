@@ -1,8 +1,8 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import HomeShader from "@/shaders/HomeShader";
 import { setToLoaded } from "@/store/slice";
-import styles from "@/styles/Home.module.css";
 import { shaderContainerStyle } from "@/styles/constants";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const HomeScreen = () => {
@@ -14,7 +14,7 @@ export const HomeScreen = () => {
     if (!hasLoaded) {
       setTimeout(() => dispatch(setToLoaded()), 9000);
     }
-  });
+  }, [dispatch, hasLoaded]);
 
   useEffect(() => {
     if (!hasLoaded && !nameFaded) {
@@ -27,7 +27,7 @@ export const HomeScreen = () => {
   return (
     <>
       <main className="absolute p-24 flex w-screen h-screen justify-center lg:justify-normal lg:items-center">
-        <div className="font-serif minion-3 text-white">
+        <div className="font-serif minion-3 text-snow">
           {!hasLoaded ? (
             <>
               <div className="text-center lg:text-left text-4xl lg:text-9xl">

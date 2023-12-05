@@ -1,3 +1,7 @@
 export default function About() {
-  <div className="p-24 flex w-screen h-screen">Hi, its me.</div>;
+  return (
+    <div className="p-24 items-center justify-center flex w-screen h-screen">
+      <span className="text-snow ">Hi, it&#39;s me.</span>
+    </div>
+  );
 }
