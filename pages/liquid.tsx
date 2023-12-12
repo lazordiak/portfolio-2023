@@ -8,7 +8,11 @@ const Liquid = () => {
       <div className="p-24 flex justify-center">
         <main className="px-48 w-full text-snow flex flex-col">
           <span className="lg:text-6xl font-bold">Liquid Relationships</span>
-          <div className="w-full mt-48">
+          <span className="mt-24">
+            A touch and water based interactive installation about forming
+            connections.
+          </span>
+          <div className="w-full mt-24">
             <div style={{ position: "relative", paddingTop: "56.25%" }}>
               <iframe
                 width="100%"

@@ -1,3 +1,5 @@
+import { Header } from "@/components/bars/Header";
+
 const Thesis = () => {
   return (
     <div>

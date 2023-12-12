@@ -1,3 +1,5 @@
+import { Header } from "@/components/bars/Header";
+
 export default function About() {
   return (
     <div className="p-24 items-center justify-center flex w-screen h-screen">

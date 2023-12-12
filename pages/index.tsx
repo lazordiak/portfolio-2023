@@ -25,10 +25,10 @@ export default function Home() {
       </Head>
       <Provider store={store}>
         {shaderIndex === 0 && <HomeScreen />}
-        {shaderIndex === 1 && <LiquidScreen />}
+        {shaderIndex === 3 && <LiquidScreen />}
         {shaderIndex === 2 && <JournalsScreen />}
-        {shaderIndex === 3 && <WeatherScreen />}
-        {shaderIndex === 4 && <ThesisScreen />}
+        {shaderIndex === 4 && <WeatherScreen />}
+        {shaderIndex === 1 && <ThesisScreen />}
         <div className="w-full p-24 bottom-0 absolute flex justify-center">
           <PageTracker
             shaderIndex={shaderIndex}
