@@ -16,7 +16,7 @@ const Journals = () => {
             <Image
               src="/JournalsGIF.gif"
               fill
-              className="object-contain"
+              className="object-contain rounded"
               alt={"An image of my project liquid relationships"}
             />
           </div>

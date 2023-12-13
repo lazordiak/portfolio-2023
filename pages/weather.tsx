@@ -61,12 +61,14 @@ const Weather = () => {
           </div>
           <div className="mt-48 flex-row flex justify-around">
             <Image
+              className="rounded"
               src="/weather1.png"
               width={500}
               height={400}
               alt={"An image of my project liquid relationships"}
             />
             <Image
+              className="rounded"
               src="/weather2.png"
               width={500}
               height={400}

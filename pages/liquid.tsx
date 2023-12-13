@@ -39,12 +39,14 @@ const Liquid = () => {
           </div>
           <div className="mt-48 flex-row flex justify-around">
             <Image
+              className="rounded"
               src="/liquid1.jpg"
               width={500}
               height={500}
               alt={"An image of my project liquid relationships"}
             />
             <Image
+              className="rounded"
               src="/liquid2.jpg"
               width={500}
               height={500}
@@ -69,12 +71,14 @@ const Liquid = () => {
           </div>
           <div className="mt-48 flex-row flex justify-around">
             <Image
+              className="rounded"
               src="/liquid3.jpg"
               width={500}
               height={500}
               alt={"An image of my project liquid relationships"}
             />
             <Image
+              className="rounded"
               src="/liquid4.jpg"
               width={500}
               height={500}
@@ -97,12 +101,14 @@ const Liquid = () => {
           </div>
           <div className="mt-48 flex-row flex justify-around">
             <Image
+              className="rounded"
               src="/liquid5.jpg"
               width={500}
               height={500}
               alt={"An image of my project liquid relationships"}
             />
             <Image
+              className="rounded"
               src="/liquid6.jpg"
               width={500}
               height={500}
