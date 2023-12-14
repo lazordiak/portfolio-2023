@@ -13,7 +13,7 @@ export const useShaderUpdater = (
       const GoingDown = event.key === "ArrowLeft";
       if (GoingUp) {
         event.preventDefault();
-        shaderIndex < 4 ? setShaderIndex(shaderIndex + 1) : null;
+        shaderIndex < 5 ? setShaderIndex(shaderIndex + 1) : null;
       } else if (GoingDown) {
         event.preventDefault();
         shaderIndex > 0 ? setShaderIndex(shaderIndex - 1) : null;

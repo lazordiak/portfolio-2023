@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const PageTracker = ({ shaderIndex, setShaderIndex }) => {
-  const buttons = [0, 1, 2, 3, 4];
+  const buttons = [0, 1, 2, 3, 4, 5];
   return (
     <div className="flex flex-col">
       <div className="w-48 flex justify-between">
@@ -18,9 +18,9 @@ export const PageTracker = ({ shaderIndex, setShaderIndex }) => {
           );
         })}
       </div>
-      <Link className="text-snow" href="/about">
+      {/*<Link className="text-snow" href="/about">
         About me
-      </Link>
+      </Link>*/}
     </div>
   );
 };

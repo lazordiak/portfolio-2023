@@ -9,7 +9,7 @@ export const Header = () => {
         <Link className="text-snow" href="/about">
           About
         </Link>
-        <Link className="text-snow ml-12" href={"/contact"}>
+        <Link className="text-snow ml-12" href="/contact">
           Contact
         </Link>
       </div>

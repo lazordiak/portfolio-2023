@@ -9,6 +9,7 @@ import { ThesisScreen } from "@/components/screens/ThesisScreen";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import { PageTracker } from "@/components/buttons/PageTracker";
+import { HackathonScreen } from "@/components/screens/HackathonScreen";
 
 export default function Home() {
   const [shaderIndex, setShaderIndex] = useState(0);
@@ -29,6 +30,7 @@ export default function Home() {
         {shaderIndex === 2 && <JournalsScreen />}
         {shaderIndex === 4 && <WeatherScreen />}
         {shaderIndex === 1 && <ThesisScreen />}
+        {shaderIndex === 5 && <HackathonScreen />}
         <div className="w-full p-24 bottom-0 absolute flex justify-center">
           <PageTracker
             shaderIndex={shaderIndex}
