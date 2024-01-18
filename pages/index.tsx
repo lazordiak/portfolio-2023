@@ -10,6 +10,7 @@ import { HackathonScreen } from "@/components/screens/HackathonScreen";
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { updateShaderIndex } from "@/store/slice";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -47,12 +48,60 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {shaderIndex === 0 && <HomeScreen />}
-      {shaderIndex === 3 && <LiquidScreen />}
-      {shaderIndex === 2 && <JournalsScreen />}
-      {shaderIndex === 4 && <WeatherScreen />}
-      {shaderIndex === 1 && <ThesisScreen />}
-      {shaderIndex === 5 && <HackathonScreen />}
+      {shaderIndex === 0 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <HomeScreen />
+        </motion.div>
+      )}
+      {shaderIndex === 3 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <LiquidScreen />
+        </motion.div>
+      )}
+      {shaderIndex === 2 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <JournalsScreen />
+        </motion.div>
+      )}
+      {shaderIndex === 4 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <WeatherScreen />
+        </motion.div>
+      )}
+      {shaderIndex === 1 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <ThesisScreen />
+        </motion.div>
+      )}
+      {shaderIndex === 5 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <HackathonScreen />
+        </motion.div>
+      )}
       <div className="w-full p-24 bottom-0 absolute flex justify-center">
         <PageTracker shaderIndex={shaderIndex} />
       </div>
