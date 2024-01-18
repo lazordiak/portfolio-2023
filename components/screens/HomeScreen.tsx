@@ -4,6 +4,7 @@ import { setToLoaded } from "@/store/slice";
 import { shaderContainerStyle } from "@/styles/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Header } from "../bars/Header";
 
 export const HomeScreen = () => {
   const [nameFaded, setNameFaded] = useState(false);
@@ -26,7 +27,7 @@ export const HomeScreen = () => {
 
   return (
     <>
-      <main className="absolute p-24 flex w-screen h-screen justify-center lg:justify-normal lg:items-center">
+      <main className="absolute py-24 px-72 flex w-screen h-screen justify-center lg:justify-normal lg:items-center">
         <div className="font-serif minion-3 text-snow">
           {!hasLoaded ? (
             <>
