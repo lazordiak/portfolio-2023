@@ -1,22 +1,19 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "./reduxHooks";
-import { setToLoaded } from "@/store/slice";
-import { ThunkDispatch } from "@reduxjs/toolkit";
+import { useAppDispatch } from "./reduxHooks";
+import { updateShaderIndex } from "@/store/slice";
 
-export const useShaderUpdater = (
-  shaderIndex: number,
-  setShaderIndex: Dispatch<SetStateAction<number>>
-): void => {
+export const useShaderUpdater = (shaderIndex: number): void => {
+  const dispatch = useAppDispatch();
   useEffect(() => {
     const onKeyDown = (event) => {
       const GoingUp = event.key === "ArrowRight";
       const GoingDown = event.key === "ArrowLeft";
       if (GoingUp) {
         event.preventDefault();
-        shaderIndex < 5 ? setShaderIndex(shaderIndex + 1) : null;
+        shaderIndex < 5 ? dispatch(updateShaderIndex(shaderIndex + 1)) : null;
       } else if (GoingDown) {
         event.preventDefault();
-        shaderIndex > 0 ? setShaderIndex(shaderIndex - 1) : null;
+        shaderIndex > 0 ? dispatch(updateShaderIndex(shaderIndex - 1)) : null;
       } else {
         event.preventDefault();
       }
@@ -26,5 +23,5 @@ export const useShaderUpdater = (
     return () => {
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [shaderIndex, setShaderIndex]);
+  }, [shaderIndex, dispatch]);
 };
