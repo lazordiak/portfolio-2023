@@ -1,15 +1,24 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BackButton } from "../buttons/BackButton";
 
 export const Header = () => {
+  const pathName = usePathname();
+  console.log(pathName);
   return (
-    <div className="px-72 pt-12 flex flex-row justify-between lg:text-xl">
+    <div className="px-72 pt-24 flex flex-row justify-between lg:text-xl text-snow">
       <BackButton />
       <div>
-        <Link className="text-snow" href="/about">
+        <Link
+          className={pathName === "/about" ? " underline" : ""}
+          href="/about"
+        >
           About
         </Link>
-        <Link className="text-snow ml-12" href="/contact">
+        <Link
+          className={"ml-12" + (pathName === "/contact" ? " underline" : "")}
+          href="/contact"
+        >
           Contact
         </Link>
       </div>
