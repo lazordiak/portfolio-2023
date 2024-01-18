@@ -14,7 +14,7 @@ import { updateShaderIndex } from "@/store/slice";
 export default function Home() {
   const dispatch = useAppDispatch();
   const shaderIndex = useAppSelector((state) => state.shaderIndex);
-  useShaderUpdater(shaderIndex);
+  useShaderUpdater();
 
   return (
     <>

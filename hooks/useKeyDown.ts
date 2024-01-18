@@ -1,8 +1,9 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
-import { useAppDispatch } from "./reduxHooks";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "./reduxHooks";
 import { updateShaderIndex } from "@/store/slice";
 
-export const useShaderUpdater = (shaderIndex: number): void => {
+export const useShaderUpdater = (): void => {
+  const shaderIndex = useAppSelector((state) => state.shaderIndex);
   const dispatch = useAppDispatch();
   useEffect(() => {
     const onKeyDown = (event) => {
