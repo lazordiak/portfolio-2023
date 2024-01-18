@@ -3,7 +3,7 @@ import appReducer, { initialState } from "./slice";
 
 export const store = configureStore({
   reducer: appReducer,
-  preloadedState: { hasLoaded: false },
+  preloadedState: { hasLoaded: false, shaderIndex: 0 },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
