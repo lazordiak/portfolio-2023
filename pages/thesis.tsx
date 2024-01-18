@@ -98,6 +98,20 @@ const Thesis = () => {
               <li>Oculus Quest 2 Headset</li>
             </ul>
           </div>
+          <div className="mt-48 flex-row flex justify-around">
+            <Image
+              src="/cezarExhibition.jpg"
+              width={500}
+              height={500}
+              alt={"An image of my project liquid relationships"}
+            />
+            <Image
+              src="/girlExhibition.jpg"
+              width={500}
+              height={500}
+              alt={"An image of my project liquid relationships"}
+            />
+          </div>
           <div className="mt-48 flex-col flex lg:text-lg">
             <span className="lg:text-4xl font-semibold">Mechanisms</span>
             <span className="mt-12">
@@ -116,6 +130,20 @@ const Thesis = () => {
               HTC&apos;s Vive, and Valve&apos;s Index have all been tested.
             </span>
           </div>
+          <div className="mt-48 flex-row flex justify-around">
+            <Image
+              src="/exhibitionPics1.jpg"
+              width={500}
+              height={500}
+              alt={"An image of my project liquid relationships"}
+            />
+            <Image
+              src="/exhibitionPics2.jpg"
+              width={500}
+              height={500}
+              alt={"An image of my project liquid relationships"}
+            />
+          </div>
           <div className="mt-48 flex-col flex">
             <span className="lg:text-4xl font-semibold">Reflections</span>
             <span className="mt-12 lg:text-lg">
@@ -132,6 +160,20 @@ const Thesis = () => {
               the effect might be lost if I do. If you have any suggestions,
               I&apos;d love to hear them!
             </span>
+          </div>
+          <div className="mt-48 flex-row flex justify-around">
+            <Image
+              src="/exhibitionPics3.jpg"
+              width={500}
+              height={500}
+              alt={"An image of my project liquid relationships"}
+            />
+            <Image
+              src="/exhibitionPics4.jpg"
+              width={500}
+              height={500}
+              alt={"An image of my project liquid relationships"}
+            />
           </div>
         </main>
       </div>
