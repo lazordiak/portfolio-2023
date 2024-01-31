@@ -6,7 +6,7 @@ export const Header = () => {
   const pathName = usePathname();
   console.log(pathName);
   return (
-    <div className="px-72 pt-24 flex flex-row justify-between lg:text-xl text-snow">
+    <div className="px-12 lg:px-72 pt-12 lg:pt-24 flex flex-row justify-between text-lg lg:text-xl text-snow">
       <BackButton />
       <div>
         <Link

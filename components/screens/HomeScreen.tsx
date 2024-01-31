@@ -27,7 +27,7 @@ export const HomeScreen = () => {
 
   return (
     <>
-      <main className="absolute py-24 px-72 flex w-screen h-screen justify-center lg:justify-normal lg:items-center">
+      <main className="absolute lg:py-24 lg:px-72 flex w-screen h-screen justify-center lg:justify-normal items-center">
         <div className="font-serif minion-3 text-snow">
           {!hasLoaded ? (
             <>
