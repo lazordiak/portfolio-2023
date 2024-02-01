@@ -1,17 +1,19 @@
 import { Header } from "@/components/bars/Header";
+import { ContentContainer } from "@/components/containers/ContentContainer";
+import { ContentHeader } from "@/components/content/ContentHeader";
 import Image from "next/image";
 
 const Journals = () => {
   return (
     <div>
       <Header />
-      <main className="px-12 lg:px-72 justify-center w-full text-snow flex flex-col">
-        <span className="lg:text-6xl mt-24 font-bold">Weather Journals</span>
-        <span className="mt-24">
-          Collaborative storytelling between you and the weather, moderated by
-          ML algorithms. Access here.
-        </span>
-        <div className="relative w-full h-[600px] mt-48">
+      <ContentContainer>
+        <ContentHeader
+          blurb="Collaborative storytelling between you and the weather, moderated by
+          ML algorithms."
+          title="Weather Journals"
+        />
+        <div className="relative w-full h-[300px] lg:mt-48">
           <Image
             src="/JournalsGIF.gif"
             fill
@@ -19,7 +21,7 @@ const Journals = () => {
             alt={"An image of my project liquid relationships"}
           />
         </div>
-        <div className="mt-48 flex-col flex lg:text-lg">
+        <div className="lg:mt-48 flex-col flex lg:text-lg">
           <span className="lg:text-4xl font-semibold">Concept</span>
           <span className="mt-12">
             In a time in which we, as humans, have unparalled control over the
@@ -37,7 +39,7 @@ const Journals = () => {
             impetus for this project.
           </span>
         </div>
-        <div className="mt-48 flex-col flex">
+        <div className="mt-24 flex-col flex">
           <span className="lg:text-4xl font-semibold">Tools</span>
           <ul className="mt-12 lg:text-lg list-disc">
             <li>JS/HTML/CSS</li>
@@ -46,7 +48,7 @@ const Journals = () => {
             <li>GPT2 from OpenAI</li>
           </ul>
         </div>
-        <div className="mt-48 flex-col flex lg:text-lg">
+        <div className="mt-24 flex-col flex lg:text-lg">
           <span className="lg:text-4xl font-semibold">Mechanisms</span>
           <span className="mt-12">
             The project has two parts to it: the background sketch and the text
@@ -75,7 +77,7 @@ const Journals = () => {
             has participated before.
           </span>
         </div>
-        <div className="mt-48 mb-48 flex-col flex">
+        <div className="mt-24 mb-48 flex-col flex">
           <span className="lg:text-4xl font-semibold">Reflections</span>
           <span className="mt-12 lg:text-lg">
             This is another project that feeds into my interest in using
@@ -89,7 +91,7 @@ const Journals = () => {
             update to the latest GPT!
           </span>
         </div>
-      </main>
+      </ContentContainer>
     </div>
   );
 };

@@ -19,7 +19,7 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div className="mt-6">
       <Link href={link}>
-        <div className="text-2xl">{title}</div>
+        <div className="text-lg lg:text-2xl">{title}</div>
         <div>
           <Image
             className="mt-6 rounded"

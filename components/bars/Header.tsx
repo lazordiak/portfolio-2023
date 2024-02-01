@@ -4,9 +4,8 @@ import { BackButton } from "../buttons/BackButton";
 
 export const Header = () => {
   const pathName = usePathname();
-  console.log(pathName);
   return (
-    <div className="px-12 lg:px-72 pt-12 lg:pt-24 flex flex-row justify-between text-lg lg:text-xl text-snow">
+    <div className="px-12 pt-12 flex flex-row justify-between text-lg text-snow lg:px-72 lg:pt-24 lg:text-xl">
       <BackButton />
       <div>
         <Link
