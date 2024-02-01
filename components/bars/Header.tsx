@@ -9,13 +9,16 @@ export const Header = () => {
       <BackButton />
       <div>
         <Link
-          className={pathName === "/about" ? " underline" : ""}
+          className={pathName === "/about" ? " underline" : " hover:underline"}
           href="/about"
         >
           About
         </Link>
         <Link
-          className={"ml-12" + (pathName === "/contact" ? " underline" : "")}
+          className={
+            "ml-12" +
+            (pathName === "/contact" ? " underline" : " hover:underline")
+          }
           href="/contact"
         >
           Contact

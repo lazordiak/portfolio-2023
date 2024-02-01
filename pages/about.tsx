@@ -5,8 +5,8 @@ export default function About() {
   return (
     <div className="h-screen w-screen">
       <Header />
-      <div className="py-24 px-72 flex flex-row justify-between text-snow">
-        <div className="flex-1 flex pr-24 flex-col">
+      <div className="py-12 lg:py-24 px-12 lg:px-72 flex flex-col lg:flex-row items-center lg:justify-between text-snow">
+        <div className="flex-1 flex lg:pr-24 flex-col">
           <span className="text-lg font-medium">About Schuyler</span>
           <span className="mt-6">
             By day, Schuyler makes money doing software engineering things like
@@ -24,7 +24,7 @@ export default function About() {
           </span>
         </div>
         <div
-          className="relative justify-end w-1/3"
+          className="mt-12 lg:mt-0 relative justify-end w-1/2 lg:w-1/3"
           style={{ paddingBottom: "33%" }}
         >
           <Image
