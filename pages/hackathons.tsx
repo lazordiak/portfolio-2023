@@ -16,10 +16,10 @@ const Hackathon = () => {
           year."
         />
         <>
-          <span className="lg:text-4xl mt-24 font-semibold">
+          <span className="text-3xl lg:text-4xl mt-24 font-semibold">
             MIT Reality Hack
           </span>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
               altText="A photo from the Stone Stories presentation video"
               caption="A communal AR project to build interactive monuments and share
@@ -36,13 +36,20 @@ const Hackathon = () => {
               photoPath="letgoxr1.png"
               title="LetgoXR"
             />
+            <Card
+              altText="A photo from our presentation video, where one of my teammates jumps on a large AR piano we made."
+              caption="A multiplayer AR project where players jump on a huge AR piano to find the correct chords to play."
+              link="https://devpost.com/software/jump-on-it?ref_content=my-projects-tab&ref_feature=my_projects"
+              photoPath="piano1.png"
+              title="Jump On It"
+            />
           </div>
         </>
         <>
-          <span className="lg:text-4xl mt-24 font-semibold">
+          <span className="text-3xl lg:text-4xl mt-24 font-semibold">
             Global Game Jam
           </span>
-          <div className="mb-24 grid grid-cols-2 gap-6">
+          <div className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
               altText="A screenshot from curse of the mummy 3d"
               caption="A game where you play as a mummy trying to find its stomach."
@@ -56,6 +63,13 @@ const Hackathon = () => {
               link="https://v3.globalgamejam.org/2022/games/shadow-2"
               photoPath="shadow1.png"
               title="The Shadow"
+            />
+            <Card
+              altText="A screenshot from The Tower."
+              caption="A visual novel where the last human climbs a tower of AIs."
+              link="https://v3.globalgamejam.org/2023/games/tower-8"
+              photoPath="tower1.png"
+              title="The Tower"
             />
           </div>
         </>

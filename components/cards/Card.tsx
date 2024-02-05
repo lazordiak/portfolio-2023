@@ -25,10 +25,10 @@ export const Card: React.FC<CardProps> = ({
             className="mt-6 rounded"
             alt={altText}
             src={`/${photoPath}`}
-            width={600}
-            height={600}
+            width={500}
+            height={500}
           />
-          <div className="mt-6">{caption}</div>
+          <div className="mt-6 lg:pr-12">{caption}</div>
         </div>
       </Link>
     </div>

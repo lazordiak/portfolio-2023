@@ -31,7 +31,7 @@ export const HomeScreen = () => {
         <div className="font-serif minion-3 text-snow">
           {!hasLoaded ? (
             <>
-              <div className="text-center lg:text-left text-4xl lg:text-9xl">
+              <div className="text-center text-6xl lg:text-left lg:text-9xl">
                 <span className="opacity-0 animate-fade-in [--fade-delay:1000ms]">
                   S
                 </span>
@@ -57,7 +57,7 @@ export const HomeScreen = () => {
                   r
                 </span>
               </div>
-              <div className="text-center mb-4 lg:text-left text-4xl lg:text-9xl">
+              <div className="text-center mb-4 lg:text-left text-6xl lg:text-9xl">
                 <span className="opacity-0 animate-fade-in [--fade-delay:300ms]">
                   d
                 </span>
@@ -83,7 +83,7 @@ export const HomeScreen = () => {
             </>
           ) : (
             <>
-              <div className="text-center lg:text-left text-4xl lg:text-9xl">
+              <div className="text-center lg:text-left text-6xl lg:text-9xl">
                 <span>S</span>
                 <span>c</span>
                 <span>h</span>
@@ -93,14 +93,14 @@ export const HomeScreen = () => {
                 <span>e</span>
                 <span>r</span>
               </div>
-              <div className="text-center mb-4 lg:text-left text-4xl lg:text-9xl">
+              <div className="text-center mb-4 lg:text-left text-6xl lg:text-9xl">
                 <span>d</span>
                 <span>e</span>
                 <span>V</span>
                 <span>o</span>
                 <span>s</span>
               </div>
-              <div className="text-center mt-4 lg:text-left lg:text-xl">
+              <div className="text-center text-lg mt-4 lg:text-left lg:text-xl">
                 Web developer, creative technologist.
               </div>
               <div className="text-center mt-4 lg:text-left lg:text-xl">
