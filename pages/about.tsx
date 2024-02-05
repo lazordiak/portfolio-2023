@@ -24,7 +24,7 @@ export default function About() {
           </span>
         </div>
         <div
-          className="mt-12 lg:mt-0 relative justify-end w-1/2 lg:w-1/3"
+          className="mt-12 lg:mt-0 relative justify-end w-1/3"
           style={{ paddingBottom: "33%" }}
         >
           <Image

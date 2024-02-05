@@ -28,7 +28,7 @@ export default function Home() {
       </Head>
       <div className="absolute p-12 lg:text-xl flex w-full justify-between lg:py-24 lg:px-72 text-snow z-10">
         <button
-          className="hidden md:block"
+          className="hidden md:block hover:underline"
           onClick={() => {
             dispatch(updateShaderIndex(0));
           }}
@@ -39,12 +39,12 @@ export default function Home() {
         <div className="w-full md:w-fit justify-between md:justify-normal flex flex-row">
           <div>
             <Link href="/about">
-              <span>About</span>
+              <span className="hover:underline">About</span>
             </Link>
           </div>
           <div className="ml-12">
             <Link href="/contact">
-              <span>Contact</span>
+              <span className="hover:underline">Contact</span>
             </Link>
           </div>
         </div>

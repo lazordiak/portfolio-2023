@@ -18,8 +18,8 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className="mt-6">
-      <Link href={link}>
-        <div className="text-lg lg:text-2xl">{title}</div>
+      <Link className="group" href={link}>
+        <div className="text-lg group-hover:underline lg:text-2xl">{title}</div>
         <div>
           <Image
             className="mt-6 rounded"
