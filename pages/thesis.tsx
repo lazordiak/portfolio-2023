@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
 import { PageTitle } from "@/components/content/PageTitle";
@@ -18,6 +19,7 @@ const Thesis = () => {
         <div className="w-full mt-24">
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
             <iframe
+              className="border-solid border-2"
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/BO4b37uYqNY?si=iYF1zuzSIUFsyuhQ"
@@ -27,6 +29,11 @@ const Thesis = () => {
               allow="encrypted-media; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+          </div>
+          <div className="italic mt-6">
+            Above is a gameplay demonstration of the project that showcases some
+            of the different environments and the changes they undergo as the
+            participant moves through them.
           </div>
         </div>
         <div className="mt-24 flex-col flex lg:text-lg">
@@ -65,6 +72,7 @@ const Thesis = () => {
         <div className="w-full mt-24">
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
             <iframe
+              className="border-solid border-2"
               width="100%"
               height="100%"
               src="https://player.vimeo.com/video/552084792?h=a304fb9c2d"
@@ -75,6 +83,10 @@ const Thesis = () => {
               allowFullScreen
             ></iframe>
           </div>
+          <div className="italic mt-6">
+            Here is my thesis presentation of the final project, going through
+            some of my processes and inspirations.
+          </div>
         </div>
         <div className="mt-24 flex-col flex">
           <span className="lg:text-4xl font-semibold">Tools</span>
@@ -83,20 +95,16 @@ const Thesis = () => {
             <li>Oculus Quest 2 Headset</li>
           </ul>
         </div>
-        <div className="mt-24 flex-col flex justify-between lg:flex-row">
-          <Image
-            className="rounded"
-            src="/cezarExhibition.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my weather band instrument."
+            photoPath="cezarExhibition.jpg"
+            caption="We set up the environment outside of the VR experience to reflect what people would see inside the headset."
           />
-          <Image
-            className="mt-12 lg:mt-0 rounded"
-            src="/girlExhibition.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project liquid relationships."
+            photoPath="girlExhibition.jpg"
+            caption="The direction you face within the VR world mirror the direction you're facing in real life, meaning to change directions in the VR world you must change your orientation in the physical world."
           />
         </div>
         <div className="mt-24 flex-col flex lg:text-lg">
@@ -117,20 +125,16 @@ const Thesis = () => {
             Index have all been tested.
           </span>
         </div>
-        <div className="mt-24 flex-col flex justify-between lg:flex-row">
-          <Image
-            className="rounded"
-            src="/exhibitionPics1.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my weather band instrument."
+            photoPath="exhibitionPics1.jpg"
+            caption="We asked people to stop when they reached a place that held resonance for them. We took a photo of where they ended up and pasted them along the walls."
           />
-          <Image
-            className="mt-12 rounded lg:mt-0"
-            src="/exhibitionPics2.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project liquid relationships."
+            photoPath="exhibitionPics2.jpg"
+            caption="The environments spread and blend together depending on the direction you take -- here you can see elements from the desert, the seafloor and the coast intermingled."
           />
         </div>
         <div className="mt-24 flex-col flex">
@@ -150,20 +154,16 @@ const Thesis = () => {
             I&apos;d love to hear them!
           </span>
         </div>
-        <div className="my-24 flex-col flex justify-between lg:flex-row">
-          <Image
-            className="rounded"
-            src="/exhibitionPics3.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+        <div className="my-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my weather band instrument."
+            photoPath="exhibitionPics3.jpg"
+            caption="Here you can see the place I ended up!"
           />
-          <Image
-            className="mt-12 rounded lg:mt-0"
-            src="/exhibitionPics4.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project liquid relationships."
+            photoPath="exhibitionPics4.jpg"
+            caption="And here are a few more."
           />
         </div>
       </ContentContainer>

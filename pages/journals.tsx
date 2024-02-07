@@ -13,15 +13,23 @@ const Journals = () => {
           ML algorithms."
           title="Weather Journals"
         />
-        <div className="relative w-full h-[300px] lg:mt-48">
+        <div className="relative w-full h-[400px] lg:h-[550px] lg:mt-24">
           <Image
             src="/JournalsGIF.gif"
             fill
-            className="object-contain rounded"
+            className="rounded object-contain border-solid border-2"
             alt={"An image of my project liquid relationships"}
           />
         </div>
-        <div className="lg:mt-48 flex-col flex lg:text-lg">
+        <div className="italic mt-6">
+          This gif showcases the UI for Weather Journals. When loading the page,
+          the sun and moon rise (and set) until they reach the current position
+          of the sun in New York City. The clouds move according to wind speed,
+          and if it&apos;s raining in New York you&apos;ll also see rain appear
+          in the site. After the celestial bodies reach the correct position,
+          the prompts will appear and the user can input text.
+        </div>
+        <div className="lg:mt-24 flex-col flex lg:text-lg">
           <span className="lg:text-4xl font-semibold">Concept</span>
           <span className="mt-12">
             In a time in which we, as humans, have unparalled control over the

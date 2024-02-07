@@ -11,7 +11,7 @@ export const useShaderUpdater = (): void => {
       const GoingDown = event.key === "ArrowLeft";
       if (GoingUp) {
         event.preventDefault();
-        shaderIndex < 5 ? dispatch(updateShaderIndex(shaderIndex + 1)) : null;
+        shaderIndex < 6 ? dispatch(updateShaderIndex(shaderIndex + 1)) : null;
       } else if (GoingDown) {
         event.preventDefault();
         shaderIndex > 0 ? dispatch(updateShaderIndex(shaderIndex - 1)) : null;

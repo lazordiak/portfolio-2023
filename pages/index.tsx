@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { updateShaderIndex } from "@/store/slice";
 import { motion } from "framer-motion";
+import { ForagerScreen } from "@/components/screens/ForagerScreen";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -94,13 +95,22 @@ export default function Home() {
           <ThesisScreen />
         </motion.div>
       )}
-      {shaderIndex === 5 && (
+      {shaderIndex === 6 && (
         <motion.div
           exit={{ opacity: 0 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
           <HackathonScreen />
+        </motion.div>
+      )}
+      {shaderIndex === 5 && (
+        <motion.div
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <ForagerScreen />
         </motion.div>
       )}
       <div className="w-full py-12 lg:p-24 bottom-0 absolute flex justify-center">

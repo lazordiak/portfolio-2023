@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
 import Image from "next/image";
@@ -15,6 +16,7 @@ const Weather = () => {
         <div className="w-full mt-24">
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
             <iframe
+              className="border-solid border-2"
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/7sHOLi3HFPY?si=JH0WDlfvkj2CUk3q"
@@ -24,6 +26,10 @@ const Weather = () => {
               allow="encrypted-media; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+          </div>
+          <div className="italic mt-6">
+            Here&apos;s a video of our performance during the Network Music
+            Festival in 2020.
           </div>
         </div>
         <div className="mt-24 flex-col flex">
@@ -59,20 +65,16 @@ const Weather = () => {
             affordances the musician has, so to speak, when playing.
           </span>
         </div>
-        <div className="mt-24 flex-col lg:flex-row flex justify-around">
-          <Image
-            className="rounded"
-            src="/weather1.png"
-            width={500}
-            height={400}
-            alt={"An image of my project liquid relationships"}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my weather band instrument."
+            photoPath="weather1.png"
+            caption="The instrument is separated into an octave, with dots representing individual points of weather data."
           />
-          <Image
-            className="mt-12 lg:mt-0 rounded"
-            src="/weather2.png"
-            width={500}
-            height={400}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project liquid relationships."
+            photoPath="weather2.png"
+            caption="When each dot is clicked, it plays notes from that octave. In this way, the 'performance' is constrained by the weather data."
           />
         </div>
         <div className="my-24 flex-col flex">

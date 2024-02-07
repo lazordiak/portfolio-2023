@@ -2,7 +2,7 @@ import { useAppDispatch } from "@/hooks/reduxHooks";
 import { updateShaderIndex } from "@/store/slice";
 
 export const PageTracker = ({ shaderIndex }) => {
-  const buttons = [0, 1, 2, 3, 4, 5];
+  const buttons = [0, 1, 2, 3, 4, 5, 6];
   const dispatch = useAppDispatch();
   return (
     <div className="flex flex-col">

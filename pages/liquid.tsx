@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
 import { PageTitle } from "@/components/content/PageTitle";
@@ -16,6 +17,7 @@ const Liquid = () => {
         <div className="w-full mt-24">
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
             <iframe
+              className="border-solid border-2"
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/0LMNNsxPfJU?si=MG0ZX0DTEyuY_y6S&amp;start=988"
@@ -25,6 +27,10 @@ const Liquid = () => {
               allow="encrypted-media; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+          </div>
+          <div className="italic mt-6">
+            Here&apos;s a little demo from the ITP showcase -- thanks Daniel
+            Shiffman!
           </div>
         </div>
         <div className="mt-24 flex-col flex">
@@ -38,20 +44,16 @@ const Liquid = () => {
             could discover as they interacted with it.
           </span>
         </div>
-        <div className="mt-24 flex-col flex justify-between lg:flex-row">
-          <Image
-            className="rounded"
-            src="/liquid1.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my project Liquid Relationships"
+            caption="The capacitive touch works anywhere on the body as long as bare skin is touching bare skin, as you can see here!"
+            photoPath="liquid1.jpg"
           />
-          <Image
-            className="mt-12 lg:mt-0 rounded"
-            src="/liquid2.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project Liquid Relationships"
+            caption="Standing in front of the tank turns on the lights, but the pumps only turn on after the users touch each other."
+            photoPath="liquid2.jpg"
           />
         </div>
         <div className="mt-24 flex-col flex">
@@ -70,20 +72,16 @@ const Liquid = () => {
             <li>KEDSUM submersible water pump (3x)</li>
           </ul>
         </div>
-        <div className="mt-24 flex-col flex justify-between lg:flex-row">
-          <Image
-            className="rounded"
-            src="/liquid3.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my project Liquid Relationships"
+            caption="In this picture you can see the pressure sensors near the bottom. Standing on them turns on the lights lining the underside of the tank."
+            photoPath="liquid3.jpg"
           />
-          <Image
-            className="mt-12 lg:mt-0 rounded"
-            src="/liquid4.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project Liquid Relationships"
+            caption="Here you can see the project as it looks before any user interaction has occurred."
+            photoPath="liquid4.jpg"
           />
         </div>
         <div className="mt-24 flex-col flex">
@@ -100,20 +98,16 @@ const Liquid = () => {
             light.
           </span>
         </div>
-        <div className="mt-24 flex-col flex justify-between lg:flex-row">
-          <Image
-            className="rounded"
-            src="/liquid5.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of my project Liquid Relationships"
+            caption="I'm very proud of my project, and here's the proof."
+            photoPath="liquid5.jpg"
           />
-          <Image
-            className="mt-12 lg:mt-0 rounded"
-            src="/liquid6.jpg"
-            width={500}
-            height={500}
-            alt={"An image of my project liquid relationships"}
+          <MainContentCard
+            altText="An image of my project Liquid Relationships"
+            caption="As you can see, it's possible with more than two people, too! We tested it with up to 10 people, and it still worked!"
+            photoPath="liquid6.jpg"
           />
         </div>
         <div className="my-24 flex-col flex">

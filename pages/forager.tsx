@@ -1,131 +1,71 @@
 import { Header } from "@/components/bars/Header";
+import { MainContentCard } from "@/components/cards/MainContentCards";
+import { ContentContainer } from "@/components/containers/ContentContainer";
+import { ContentHeader } from "@/components/content/ContentHeader";
 import Image from "next/image";
+import Link from "next/link";
 
 const Forager = () => {
   return (
     <div>
       <Header />
-      <div className="p-24 flex justify-center">
-        <main className="px-48 w-full text-snow flex flex-col">
-          <span className="lg:text-6xl font-bold">Liquid Relationships</span>
-          <span className="mt-24">
-            A touch and water based interactive installation about forming
-            connections.
-          </span>
-          <div className="w-full mt-24">
-            <div style={{ position: "relative", paddingTop: "56.25%" }}>
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0LMNNsxPfJU?si=MG0ZX0DTEyuY_y6S&amp;start=988"
-                title="YouTube video player"
-                frameBorder="0"
-                style={{ position: "absolute", top: 0, left: 0 }}
-                allow="encrypted-media; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
+      <ContentContainer>
+        <ContentHeader
+          title="Forager"
+          blurb="A VR experience where you experience the life cycle of a mushroom."
+        />
+        <span className="mt-6">
+          Official website can be found{" "}
+          <Link href={"https://www.forager.earth/"} className="underline">
+            here
+          </Link>
+          .
+        </span>
+        <div className="w-full mt-24">
+          <div style={{ position: "relative", paddingTop: "56.25%" }}>
+            <video
+              className="border-solid border-2"
+              controls
+              width="100%"
+              height="100%"
+              src="/ForagerCut.mp4"
+              title="Forager"
+              style={{ position: "absolute", top: 0, left: 0 }}
+            ></video>
           </div>
-          <div className="mt-48 flex-col flex">
-            <span className="lg:text-4xl font-semibold">Concept</span>
-            <span className="mt-12 lg:text-lg">
-              This project was born of three desires: the desire to make
-              something that used an interesting or unconventional material (in
-              this case, water) to convey its themes, the desire to build
-              something that would connect multiple people, and the desire to
-              make something that had an element of surprise or delight to it,
-              something the user could discover as they interacted with it.
-            </span>
+          <div className="italic mt-6">
+            Above you can watch a short demo of some of the graphics from
+            Forager. You can see that the growing process of the mushroom has
+            been rendered into point cloud data and reconstructed within Unreal
+            Engine.
           </div>
-          <div className="mt-48 flex-row flex justify-around">
-            <Image
-              className="rounded"
-              src="/liquid1.jpg"
-              width={500}
-              height={500}
-              alt={"An image of my project liquid relationships"}
-            />
-            <Image
-              className="rounded"
-              src="/liquid2.jpg"
-              width={500}
-              height={500}
-              alt={"An image of my project liquid relationships"}
-            />
-          </div>
-          <div className="mt-48 flex-col flex">
-            <span className="lg:text-4xl font-semibold">Tools</span>
-            <ul className="mt-12 lg:text-lg list-disc">
-              <li>Arduino Nano 33 IoT</li>
-              <li>Adafruit Neopixels</li>
-              <li>60 gallon fish tank</li>
-              <li>
-                DIY pressure sensors (cardboard, aluminum foil, electronics)
-              </li>
-              <li>
-                DIY capacitive touch sensors (wood, aluminum foil, electronics)
-              </li>
-              <li>Acrylic</li>
-              <li>KEDSUM submersible water pump (3x)</li>
-            </ul>
-          </div>
-          <div className="mt-48 flex-row flex justify-around">
-            <Image
-              className="rounded"
-              src="/liquid3.jpg"
-              width={500}
-              height={500}
-              alt={"An image of my project liquid relationships"}
-            />
-            <Image
-              className="rounded"
-              src="/liquid4.jpg"
-              width={500}
-              height={500}
-              alt={"An image of my project liquid relationships"}
-            />
-          </div>
-          <div className="mt-48 flex-col flex">
-            <span className="lg:text-4xl font-semibold">Mechanisms</span>
-            <span className="mt-12 lg:text-lg">
-              The finished product has two interactions. The first, and more
-              obvious, occurs when people stand on the two pressure pads at the
-              same time. This triggers a light show which shines through the
-              bottom of the tank. There are also two touch pads on either side
-              of the tank; when the participants on the pressure pads place
-              their hands on the touch pads and then touch each other, the
-              second circuit is completed and the pumps in the tank turn on.
-              This sends a flurry of reflective particles through the water,
-              which catch the light.
-            </span>
-          </div>
-          <div className="mt-48 flex-row flex justify-around">
-            <Image
-              className="rounded"
-              src="/liquid5.jpg"
-              width={500}
-              height={500}
-              alt={"An image of my project liquid relationships"}
-            />
-            <Image
-              className="rounded"
-              src="/liquid6.jpg"
-              width={500}
-              height={500}
-              alt={"An image of my project liquid relationships"}
-            />
-          </div>
-          <div className="mt-48 flex-col flex">
-            <span className="lg:text-4xl font-semibold">Reflections</span>
-            <span className="mt-12 lg:text-lg">
-              This was the first large-scale interactive work I made, and it
-              taught me a lot about how to design interactive projects --
-              looking back, it&apos;s clear to me how the project is mostly
-              function and lacks a bit in the design factor.
-            </span>
-          </div>
-        </main>
-      </div>
+        </div>
+        <div className="mt-24 lg:text-lg">
+          Forager is an immersive VR experience from New Reality company where
+          participants go through the lifecycle of a mushroom, from spore to
+          decay. I served as the primary in-person engineer for much of the
+          project&apos;s development. The film premiered at Sundance 2023 and
+          has also been featured at Tribeca and other new media festivals!
+        </div>
+        <div className="mt-12 lg:text-lg">
+          The project was built in Unreal Engine for use with Meta&apos;s Quest
+          2 headset. The project also utilized a completely unique device to
+          record mushrooms as they are growing and subsequently render them as a
+          point cloud in Unreal Engine.
+        </div>
+        <div className="my-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MainContentCard
+            altText="An image of the capture device used to import mushroom captures into Unreal Engine."
+            photoPath="forager2.png"
+            caption="This special machine was used to record the mushrooms growing as point clouds."
+          />
+          <MainContentCard
+            altText="A display of the mushroom data as a point cloud in Unreal Engine"
+            photoPath="forager4.png"
+            caption="Above you can see the mushroom data displayed as a point cloud."
+          />
+        </div>
+      </ContentContainer>
     </div>
   );
 };

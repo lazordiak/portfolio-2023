@@ -21,14 +21,12 @@ export const Card: React.FC<CardProps> = ({
       <Link className="group" href={link}>
         <div className="text-lg group-hover:underline lg:text-2xl">{title}</div>
         <div>
-          <Image
-            className="mt-6 rounded"
+          <img
+            className="mt-6 rounded border-solid border-2 object-contain"
             alt={altText}
             src={`/${photoPath}`}
-            width={500}
-            height={500}
           />
-          <div className="mt-6 lg:pr-12">{caption}</div>
+          <div className="mt-6">{caption}</div>
         </div>
       </Link>
     </div>

@@ -35,10 +35,10 @@ float noise (in vec2 st) {
 
 
 float getGlow(vec2 pos,float offset){
-    float dist = clamp(20./(length(pos)),0.0001,5000.);
-    dist *= clamp(iTime/100.,0.0001,0.00085);
+    float dist = clamp(30./(length(pos)),0.0001,1000.);
+    dist *= clamp(iTime/1000.,0.0001,0.00085);
     //dist = pow((dist+clamp(sin(iTime)+noise(vec2(iTime)),-7.,-.3))/2., 1.);
-    dist = pow(dist,1.4);
+    dist = pow(dist,1.5);
     return dist;
 }
 
@@ -46,7 +46,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Normalized pixel coordinates (from 0 to 1)
     vec2 uv = fragCoord/iResolution.xy;
-    uv *= 1.;  
+    uv *= 5.;  
    	
     vec2 uv1 = uv;
     //uv1.y += sin(iTime*1.3)/3.;
@@ -55,7 +55,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
     // The ratio of the width and height of the screen
     float widthHeightRatio = iResolution.x/iResolution.y;
-    vec2 centre = vec2(0.5/1.-.5, 0.5*1.);
+    vec2 centre = vec2(0.5/5.-.5, 0.5*5.-1.5);
 	// Position of fragment relative to centre of screen
     vec2 pos1 = centre - uv1;
     // Adjust y by ratio for uniform transforms
@@ -66,7 +66,10 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     float glow;
     
     for (float i=0.; i < 30.; i++) {
-        glow += getGlow(vec2(pos1.x + i/15.,pos1.y+sin(iTime+i)/15.-.15),i);
+        glow += getGlow(vec2(pos1.x + i/5.,pos1.y+sin(iTime+i)/3.),i);
+        glow += getGlow(vec2(pos1.x + i/5.+.15,pos1.y+sin(iTime+i)/4.),i);
+        glow += getGlow(vec2(pos1.x + i/5.+.3,pos1.y+sin(iTime+i)/5.),i);
+        glow += getGlow(vec2(pos1.x + i/5.+.45,pos1.y+sin(iTime+i)/6.),i);
     }
     
     
