@@ -40,14 +40,14 @@ const Forager = () => {
             Engine.
           </div>
         </div>
-        <div className="mt-24 lg:text-lg">
+        <div className="mt-24 text-lg">
           Forager is an immersive VR experience from New Reality company where
           participants go through the lifecycle of a mushroom, from spore to
           decay. I served as the primary in-person engineer for much of the
           project&apos;s development. The film premiered at Sundance 2023 and
           has also been featured at Tribeca and other new media festivals!
         </div>
-        <div className="mt-12 lg:text-lg">
+        <div className="mt-12 text-lg">
           The project was built in Unreal Engine for use with Meta&apos;s Quest
           2 headset. The project also utilized a completely unique device to
           record mushrooms as they are growing and subsequently render them as a

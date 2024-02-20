@@ -33,9 +33,9 @@ const Liquid = () => {
             Shiffman!
           </div>
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Concept</span>
-          <span className="mt-6 lg:mt-12 lg:text-lg">
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Concept</span>
+          <span className="mt-6 lg:mt-12">
             This project was born of three desires: the desire to make something
             that used an interesting or unconventional material (in this case,
             water) to convey its themes, the desire to build something that
@@ -56,9 +56,9 @@ const Liquid = () => {
             photoPath="liquid2.jpg"
           />
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Tools</span>
-          <ul className="mt-6 lg:mt-12 lg:text-lg list-disc">
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Tools</span>
+          <ul className="mt-6 lg:mt-12 list-disc">
             <li>Arduino Nano 33 IoT</li>
             <li>Adafruit Neopixels</li>
             <li>60 gallon fish tank</li>
@@ -84,9 +84,9 @@ const Liquid = () => {
             photoPath="liquid4.jpg"
           />
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Mechanisms</span>
-          <span className="mt-6 lg:mt-12 lg:text-lg">
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Mechanisms</span>
+          <span className="mt-6 lg:mt-12">
             The finished product has two interactions. The first, and more
             obvious, occurs when people stand on the two pressure pads at the
             same time. This triggers a light show which shines through the
@@ -107,12 +107,14 @@ const Liquid = () => {
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption="As you can see, it's possible with more than two people, too! We tested it with up to 10 people, and it still worked!"
-            photoPath="liquid6.jpg"
+            photoPath="liquid6New.jpg"
           />
         </div>
-        <div className="my-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Reflections</span>
-          <span className="mt-6 lg:mt-12 lg:text-lg">
+        <div className="my-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">
+            Reflections
+          </span>
+          <span className="mt-6 lg:mt-12">
             This was the first large-scale interactive work I made, and it
             taught me a lot about how to design interactive projects -- looking
             back, it&apos;s clear to me how the project is mostly function and

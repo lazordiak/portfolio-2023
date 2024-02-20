@@ -74,7 +74,7 @@ export const HomeScreen = () => {
                   s
                 </span>
               </div>
-              <div className="text-center mb-4 lg:text-left lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
+              <div className="text-center mb-4 lg:text-left text-xl lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
                 Web developer, creative technologist.
               </div>
               <div className="text-center lg:text-left lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">

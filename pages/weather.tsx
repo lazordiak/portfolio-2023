@@ -32,9 +32,9 @@ const Weather = () => {
             Festival in 2020.
           </div>
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Concept</span>
-          <span className="mt-6 lg:mt-12 lg:text-lg">
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Concept</span>
+          <span className="mt-6 lg:mt-12">
             Weather band is a collaborative effort at ITP focused on translating
             weather data into musical performances. We built digital and
             physical instruments which play based on weather data drawn from our
@@ -45,17 +45,17 @@ const Weather = () => {
             Music Festival online.
           </span>
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Tools</span>
-          <ul className="mt-6 lg:mt-12 lg:text-lg list-disc">
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Tools</span>
+          <ul className="mt-6 lg:mt-12 list-disc">
             <li>JavaScript</li>
             <li>p5 creative coding framework</li>
             <li>A weather station!</li>
           </ul>
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Mechanisms</span>
-          <span className="mt-6 lg:mt-12 lg:text-lg">
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Mechanisms</span>
+          <span className="mt-6 lg:mt-12">
             My code draws temperature data over a range of seven days from an
             API set up to connect to a weather station on one of the
             collaborators&apos; roofs in the Lower East Side. The data is mapped
@@ -77,9 +77,11 @@ const Weather = () => {
             caption="When each dot is clicked, it plays notes from that octave. In this way, the 'performance' is constrained by the weather data."
           />
         </div>
-        <div className="my-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Reflections</span>
-          <span className="mt-6 lg:mt-12 lg:text-lg">
+        <div className="my-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">
+            Reflections
+          </span>
+          <span className="mt-6 lg:mt-12">
             I love the idea of using environmental data as constraints in
             producing art. In addition to the temperature, you can also grab
             other data points like humidity from the weather station. I&apos;d

@@ -2,8 +2,6 @@ import { Header } from "@/components/bars/Header";
 import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
-import { PageTitle } from "@/components/content/PageTitle";
-import Image from "next/image";
 import Link from "next/link";
 
 const Thesis = () => {
@@ -36,8 +34,8 @@ const Thesis = () => {
             participant moves through them.
           </div>
         </div>
-        <div className="mt-24 flex-col flex lg:text-lg">
-          <span className="lg:text-4xl font-semibold">Concept</span>
+        <div className="mt-24 flex-col flex text-lg">
+          <span className="lg:text-4xl text-2xl font-semibold">Concept</span>
           <span className="mt-6 lg:mt-12">
             &quot;Wherever you go, there you are&quot;. Usually I hear this
             expression used as a lament, a recognition that, try as we might, we
@@ -88,9 +86,9 @@ const Thesis = () => {
             some of my processes and inspirations.
           </div>
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Tools</span>
-          <ul className="mt-6 lg:mt-12 lg:text-lg list-disc">
+        <div className="mt-24 text-lg flex-col flex">
+          <span className="lg:text-4xl text-2xl font-semibold">Tools</span>
+          <ul className="mt-6 lg:mt-12 list-disc">
             <li>Unreal Engine 4.26</li>
             <li>Oculus Quest 2 Headset</li>
           </ul>
@@ -107,8 +105,8 @@ const Thesis = () => {
             caption="The direction you face within the VR world mirror the direction you're facing in real life, meaning to change directions in the VR world you must change your orientation in the physical world."
           />
         </div>
-        <div className="mt-24 flex-col flex lg:text-lg">
-          <span className="lg:text-4xl font-semibold">Mechanisms</span>
+        <div className="mt-24 flex-col text-lg flex lg:text-lg">
+          <span className="lg:text-4xl text-2xl font-semibold">Mechanisms</span>
           <span className="mt-6 lg:mt-12">
             Players begin &quot;Wherever You Go&quot; by putting on a VR
             headset. Inside, they find themselves in a vast, empty, colorless
@@ -137,8 +135,10 @@ const Thesis = () => {
             caption="The environments spread and blend together depending on the direction you take -- here you can see elements from the desert, the seafloor and the coast intermingled."
           />
         </div>
-        <div className="mt-24 flex-col flex">
-          <span className="lg:text-4xl font-semibold">Reflections</span>
+        <div className="mt-24 flex-col text-lg flex">
+          <span className="lg:text-4xl text-2xl font-semibold">
+            Reflections
+          </span>
           <span className="mt-6 lg:mt-12 lg:text-lg">
             I have a lot in the works for this project, and of them all it is
             the one I&apos;d like to see expanded the most. As with many of my
