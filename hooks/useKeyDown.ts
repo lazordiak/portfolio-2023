@@ -34,11 +34,11 @@ export const useShaderUpdater = (): void => {
       checkDirection();
 
       function checkDirection() {
-        if (touchendX < touchstartX) {
+        if (touchendX + 75 < touchstartX) {
           event.preventDefault();
           shaderIndex < 6 ? dispatch(updateShaderIndex(shaderIndex + 1)) : null;
         }
-        if (touchendX > touchstartX) {
+        if (touchendX > touchstartX + 75) {
           event.preventDefault();
           shaderIndex > 0 ? dispatch(updateShaderIndex(shaderIndex - 1)) : null;
         }
