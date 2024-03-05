@@ -2,8 +2,6 @@ import { Header } from "@/components/bars/Header";
 import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
-import { PageTitle } from "@/components/content/PageTitle";
-import Image from "next/image";
 
 const Liquid = () => {
   return (

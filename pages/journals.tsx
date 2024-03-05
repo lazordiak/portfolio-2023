@@ -9,7 +9,7 @@ const Journals = () => {
       <Header />
       <ContentContainer>
         <ContentHeader
-          blurb="Collaborative storytelling between you and the weather, moderated by
+          blurb="Collaborative storytelling between you and the weather, mediated by
           ML algorithms."
           title="Weather Journals"
         />
