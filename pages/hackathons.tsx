@@ -73,6 +73,20 @@ const Hackathon = () => {
             />
           </div>
         </>
+        <>
+          <span className="text-3xl lg:text-4xl mt-24 font-semibold">
+            Miscellaneous
+          </span>
+          <div className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card
+              altText="A picture of my RATTRACK app"
+              caption="RATTRACK: a facial recognition system for rats made for the ITP stupid shit no one needs and terrible ideas hackathon."
+              link="https://rattrack.glitch.me/"
+              photoPath="mummy1.png"
+              title="RATTRACK"
+            />
+          </div>
+        </>
       </ContentContainer>
     </div>
   );
