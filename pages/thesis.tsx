@@ -157,7 +157,7 @@ const Thesis = () => {
         <div className="my-24 grid grid-cols-1 md:grid-cols-2 gap-12">
           <MainContentCard
             altText="An image of a peaceful little place."
-            photoPath="exhibitionPics3.jpg"
+            photoPath="exhibitionPics3.JPG"
             caption="Here you can see the place I ended up!"
           />
           <MainContentCard

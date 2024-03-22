@@ -74,12 +74,12 @@ const Liquid = () => {
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption="In this picture you can see the pressure sensors near the bottom. Standing on them turns on the lights lining the underside of the tank."
-            photoPath="liquid3.jpg"
+            photoPath="liquid3.JPG"
           />
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption="Here you can see the project as it looks before any user interaction has occurred."
-            photoPath="liquid4.jpg"
+            photoPath="liquid4.JPG"
           />
         </div>
         <div className="mt-24 flex-col text-lg flex">
@@ -100,7 +100,7 @@ const Liquid = () => {
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption="I'm very proud of my project, and here's the proof."
-            photoPath="liquid5.jpg"
+            photoPath="liquid5.JPG"
           />
           <MainContentCard
             altText="An image of my project Liquid Relationships"
