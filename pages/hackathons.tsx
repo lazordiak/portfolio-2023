@@ -81,8 +81,8 @@ const Hackathon = () => {
             <Card
               altText="A picture of my RATTRACK app"
               caption="RATTRACK: a facial recognition system for rats made for the ITP stupid shit no one needs and terrible ideas hackathon."
-              link="https://rattrack.glitch.me/"
-              photoPath="mummy1.png"
+              link="https://rattrack.onrender.com/"
+              photoPath="rattrack.png"
               title="RATTRACK"
             />
           </div>
