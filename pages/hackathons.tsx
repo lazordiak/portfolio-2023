@@ -49,7 +49,7 @@ const Hackathon = () => {
           <span className="text-3xl lg:text-4xl mt-24 font-semibold">
             Global Game Jam
           </span>
-          <div className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
               altText="A screenshot from curse of the mummy 3d"
               caption="A game where you play as a mummy trying to find its stomach."
