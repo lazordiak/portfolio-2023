@@ -5,8 +5,8 @@ export default function About() {
   return (
     <div className="h-screen w-screen">
       <Header />
-      <div className="py-12 lg:py-24 px-6 lg:px-72 flex flex-col lg:flex-row text-snow text-lg">
-        <div className="flex-1 flex lg:pr-24 flex-col">
+      <div className="py-12 lg:py-24 px-6 lg:px-72 flex flex-col xl:flex-row text-snow text-lg">
+        <div className="flex-1 flex xl:pr-24 flex-col">
           <span className="text-4xl font-medium">Schuyler deVos</span>
           <span className="text-2xl mt-6">
             Software engineer, creative technologist.
@@ -26,13 +26,9 @@ export default function About() {
             If you&apos;re reading this, you could be one of them!
           </span>
         </div>
-        <div
-          className="mt-12 lg:mt-0 relative justify-end w-1/3"
-          style={{ paddingBottom: "33%" }}
-        >
-          <Image
-            className="rounded absolute"
-            fill
+        <div className="mt-12 xl:mt-0 relative justify-end w-full xl:w-1/3">
+          <img
+            className="rounded w-full"
             src={"/sky.png"}
             alt={
               "A picture of me with milk treats in my mouth that look like fangs, pretending to be a vampire."
