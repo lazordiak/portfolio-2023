@@ -1,22 +1,26 @@
 import Head from "next/head";
 import { useShaderUpdater } from "@/hooks/useKeyDown";
 import { HomeScreen } from "@/components/screens/HomeScreen";
-import { LiquidScreen } from "@/components/screens/LiquidScreen";
-import { JournalsScreen } from "@/components/screens/JournalsScreen";
-import { WeatherScreen } from "@/components/screens/WeatherScreen";
-import { ThesisScreen } from "@/components/screens/ThesisScreen";
 import { PageTracker } from "@/components/buttons/PageTracker";
-import { HackathonScreen } from "@/components/screens/HackathonScreen";
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { updateShaderIndex } from "@/store/slice";
 import { motion } from "framer-motion";
-import { ForagerScreen } from "@/components/screens/ForagerScreen";
+import { useState } from "react";
+import { ShaderScreen } from "@/components/screens/ShaderScreen";
+import LiquidShader from "@/shaders/LiquidShader";
+import ThesisShader from "@/shaders/ThesisShader";
+import WeatherShader from "@/shaders/WeatherShader";
+import JournalsShader from "@/shaders/JournalsShader";
+import ForagerShader from "@/shaders/ForagerShader";
+import HackathonShader from "@/shaders/HackathonShader";
 
 export default function Home() {
   const dispatch = useAppDispatch();
   const shaderIndex = useAppSelector((state) => state.shaderIndex);
   useShaderUpdater();
+
+  const [presStyle, setPresStyle] = useState<number>(0);
 
   return (
     <>
@@ -65,7 +69,12 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <LiquidScreen />
+          <ShaderScreen
+            title="Liquid Relationships"
+            blurb="A touch-and-water-based interactive installation about forming connections."
+            pageRef="/liquid"
+            shaderComp={<LiquidShader />}
+          />
         </motion.div>
       )}
       {shaderIndex === 2 && (
@@ -74,7 +83,13 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <JournalsScreen />
+          <ShaderScreen
+            title="Weather Journals"
+            blurb="Collaborative storytelling between you and the weather, mediated by
+            ML algorithms."
+            pageRef="/journals"
+            shaderComp={<JournalsShader />}
+          />
         </motion.div>
       )}
       {shaderIndex === 4 && (
@@ -83,7 +98,12 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <WeatherScreen />
+          <ShaderScreen
+            title="Weather Band"
+            blurb="Turning weather data into musical performances."
+            pageRef="/weather"
+            shaderComp={<WeatherShader />}
+          />
         </motion.div>
       )}
       {shaderIndex === 1 && (
@@ -92,7 +112,12 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <ThesisScreen />
+          <ShaderScreen
+            title="Wherever You Go"
+            blurb="A VR experience where participants are invited to discover a place unique to them."
+            pageRef="/thesis"
+            shaderComp={<ThesisShader />}
+          />
         </motion.div>
       )}
       {shaderIndex === 6 && (
@@ -101,7 +126,12 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <HackathonScreen />
+          <ShaderScreen
+            title="Hackathons"
+            blurb="Games, XR experiences and web projects from hackathons along the way."
+            pageRef="/hackathons"
+            shaderComp={<HackathonShader />}
+          />
         </motion.div>
       )}
       {shaderIndex === 5 && (
@@ -110,7 +140,12 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <ForagerScreen />
+          <ShaderScreen
+            title="Forager"
+            blurb="A VR film where you experience the life cycle of a mushroom."
+            pageRef="/journals"
+            shaderComp={<ForagerShader />}
+          />
         </motion.div>
       )}
       <div className="w-full py-12 lg:p-24 bottom-0 absolute flex justify-center">
