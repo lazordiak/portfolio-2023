@@ -5,7 +5,7 @@ import { BackButton } from "../buttons/BackButton";
 export const Header = () => {
   const pathName = usePathname();
   return (
-    <div className="px-6 pt-6 flex flex-row justify-between text-lg text-snow lg:px-72 lg:pt-24 lg:text-xl">
+    <div className="px-6 pt-6 flex flex-row justify-between text-lg text-snow lg:px-40 lg:pt-24 lg:text-xl">
       <BackButton />
       <div>
         <Link

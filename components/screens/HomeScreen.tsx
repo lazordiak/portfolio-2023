@@ -2,9 +2,8 @@ import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import HomeShader from "@/shaders/HomeShader";
 import { setToLoaded } from "@/store/slice";
 import { shaderContainerStyle } from "@/styles/constants";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Header } from "../bars/Header";
+import { motion } from "framer-motion";
 
 export const HomeScreen = () => {
   const [nameFaded, setNameFaded] = useState(false);
@@ -26,8 +25,12 @@ export const HomeScreen = () => {
   }, [hasLoaded, nameFaded, dispatch]);
 
   return (
-    <>
-      <main className="absolute lg:py-24 lg:px-72 flex w-screen h-screen justify-center lg:justify-normal items-center">
+    <motion.div
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      <main className="absolute lg:py-24 lg:px-40 flex w-screen h-screen justify-center lg:justify-normal items-center">
         <div className="font-serif minion-3 text-snow">
           {!hasLoaded ? (
             <>
@@ -112,6 +115,6 @@ export const HomeScreen = () => {
       </main>
 
       <div className={shaderContainerStyle}>{nameFaded && <HomeShader />}</div>
-    </>
+    </motion.div>
   );
 };
