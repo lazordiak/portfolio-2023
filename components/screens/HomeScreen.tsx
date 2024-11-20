@@ -81,7 +81,7 @@ export const HomeScreen = () => {
                 Web developer, creative technologist.
               </div>
               <div className="text-center lg:text-left lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
-                : )
+                {`: )`}
               </div>
             </>
           ) : (
@@ -107,7 +107,7 @@ export const HomeScreen = () => {
                 Web developer, creative technologist.
               </div>
               <div className="text-center mt-4 lg:text-left lg:text-xl">
-                : )
+                {`: )`}
               </div>
             </>
           )}
