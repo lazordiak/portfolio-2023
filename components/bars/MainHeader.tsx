@@ -21,7 +21,7 @@ const MainHeader: FC<MainHeaderProps> = ({ presStyle, setPresStyle }) => {
       >
         <p className="text-2xl">Schuyler deVos</p>
       </button>
-      <button
+      {/*<button
         onClick={() => {
           if (presStyle > 1) {
             setPresStyle(0);
@@ -31,7 +31,7 @@ const MainHeader: FC<MainHeaderProps> = ({ presStyle, setPresStyle }) => {
         }}
       >
         <p className="text-2xl">Change Styles</p>
-      </button>
+      </button>*/}
 
       <div className="w-full text-xl md:w-fit justify-between md:justify-normal flex flex-row">
         <div>
