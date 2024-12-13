@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import MainHeader from "@/components/bars/MainHeader";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
 import Image from "next/image";
@@ -6,7 +7,7 @@ import Image from "next/image";
 const Journals = () => {
   return (
     <div>
-      <Header />
+      <MainHeader opacity={1} />
       <ContentContainer>
         <ContentHeader
           blurb="Collaborative storytelling between you and the weather, mediated by
