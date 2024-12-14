@@ -152,7 +152,7 @@ export const HomeScreen = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            {/*<HomeShader />*/}
+            <HomeShader />
           </motion.div>
         )}
       </div>
