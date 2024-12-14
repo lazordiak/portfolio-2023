@@ -4,6 +4,13 @@ import { setToLoaded } from "@/store/slice";
 import { shaderContainerStyle } from "@/styles/constants";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Spectral } from "next/font/google";
+
+const spectral = Spectral({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+});
 
 export const HomeScreen = () => {
   const [nameFaded, setNameFaded] = useState(false);
@@ -30,11 +37,19 @@ export const HomeScreen = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <main className="absolute lg:py-24 lg:px-40 flex w-screen h-screen justify-center lg:justify-normal items-center">
-        <div className="font-serif minion-3 text-snow">
+      <main
+        className={`relative px-6 lg:px-12 py-24 flex w-screen justify-center ${spectral.className}`}
+      >
+        <div className="text-snow cursor-default">
           {!hasLoaded ? (
-            <>
-              <div className="text-center text-6xl lg:text-left lg:text-9xl">
+            <div>
+              <div
+                className="text-6xl lg:text-9xl lg:text-left"
+                style={{
+                  textShadow:
+                    "0 0 10px rgba(58, 168, 193, 0.6), 0 0 30px rgba(58, 168, 193, 0.4)",
+                }}
+              >
                 <span className="opacity-0 animate-fade-in [--fade-delay:1000ms]">
                   S
                 </span>
@@ -60,7 +75,13 @@ export const HomeScreen = () => {
                   r
                 </span>
               </div>
-              <div className="text-center mb-4 lg:text-left text-6xl lg:text-9xl">
+              <div
+                className="mb-4 text-6xl lg:text-left lg:text-9xl"
+                style={{
+                  textShadow:
+                    "0 0 10px rgba(58, 168, 193, 0.6), 0 0 30px rgba(58, 168, 193, 0.4)",
+                }}
+              >
                 <span className="opacity-0 animate-fade-in [--fade-delay:300ms]">
                   d
                 </span>
@@ -77,16 +98,21 @@ export const HomeScreen = () => {
                   s
                 </span>
               </div>
-              <div className="text-center mb-4 lg:text-left text-xl lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
-                Web developer, creative technologist.
+              <div className="text-lg lg:max-w-[66.66%] mt-4 lg:text-3xl opacity-0 animate-fade-in [--fade-delay:3000ms]">
+                is a web developer and creative technologist based in New York
+                City. His work utilizes new and emerging technologies as tools
+                for speculative worldbuilding, digitally and physically.
               </div>
-              <div className="text-center lg:text-left lg:text-xl opacity-0 animate-fade-in [--fade-delay:4500ms]">
-                {`: )`}
-              </div>
-            </>
+            </div>
           ) : (
-            <>
-              <div className="text-center lg:text-left text-6xl lg:text-9xl">
+            <div>
+              <div
+                className="text-6xl lg:text-9xl"
+                style={{
+                  textShadow:
+                    "0 0 10px rgba(58, 168, 193, 0.6), 0 0 30px rgba(58, 168, 193, 0.4)",
+                }}
+              >
                 <span>S</span>
                 <span>c</span>
                 <span>h</span>
@@ -96,25 +122,40 @@ export const HomeScreen = () => {
                 <span>e</span>
                 <span>r</span>
               </div>
-              <div className="text-center mb-4 lg:text-left text-6xl lg:text-9xl">
+              <div
+                className="mb-4 text-6xl lg:text-9xl"
+                style={{
+                  textShadow:
+                    "0 0 10px rgba(58, 168, 193, 0.6), 0 0 30px rgba(58, 168, 193, 0.4)",
+                }}
+              >
                 <span>d</span>
                 <span>e</span>
                 <span>V</span>
                 <span>o</span>
                 <span>s</span>
               </div>
-              <div className="text-center text-lg mt-4 lg:text-left lg:text-xl">
-                Web developer, creative technologist.
+              <div className="text-lg lg:max-w-[66.66%] mt-4 lg:text-3xl">
+                is a web developer and creative technologist based in New York
+                City. His work utilizes new and emerging technologies as tools
+                for speculative worldbuilding, digitally and physically.
               </div>
-              <div className="text-center mt-4 lg:text-left lg:text-xl">
-                {`: )`}
-              </div>
-            </>
+            </div>
           )}
         </div>
       </main>
 
-      <div className={shaderContainerStyle}>{nameFaded && <HomeShader />}</div>
+      <div className={shaderContainerStyle}>
+        {true && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <HomeShader />
+          </motion.div>
+        )}
+      </div>
     </motion.div>
   );
 };

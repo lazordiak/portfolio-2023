@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import MainHeader from "@/components/bars/MainHeader";
 import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
@@ -8,7 +9,7 @@ import Link from "next/link";
 const Forager = () => {
   return (
     <div>
-      <Header />
+      <MainHeader opacity={1} />
       <ContentContainer>
         <ContentHeader
           title="Forager"

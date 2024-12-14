@@ -33,6 +33,9 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     vec3 col = vec3(0.0);
 
+    float fadeInDuration = 1.0; // Time it takes for each light to fade in
+    float delayBetweenLights = 0.15; // Delay between each light's fade-in start
+
 for (int i = 0; i < 13; i++) {
    float seed = float(i) * 100.0;
 
@@ -59,6 +62,13 @@ for (int i = 0; i < 13; i++) {
         float phaseOffset = fract(sin(seed) * 43758.5453123); // Unique phase offset per orb
         float lifeCycle = fract(iTime * 0.1 + phaseOffset);   // Independent fade timing
         float fade = smoothstep(0.0, 0.5, lifeCycle) * smoothstep(1.0, 0.5, lifeCycle);
+
+        // Fade-in logic based on light index and time
+        float startTime = float(i) * delayBetweenLights; // When this light starts fading in
+        float fadeIn = smoothstep(startTime, startTime + fadeInDuration, iTime);
+
+        // Combine fade-in with lifecycle fade
+        fade *= fadeIn;
 
          // Add to final color with slight variation in color hues
         vec3 baseColor = vec3(0.227 * fract(seed), 0.659, 0.757);

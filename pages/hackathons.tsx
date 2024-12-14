@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import MainHeader from "@/components/bars/MainHeader";
 import { Card } from "@/components/cards/Card";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
@@ -6,7 +7,7 @@ import { ContentHeader } from "@/components/content/ContentHeader";
 const Hackathon = () => {
   return (
     <div>
-      <Header />
+      <MainHeader opacity={1} />
       <ContentContainer>
         <ContentHeader
           title="Miscellaneous Projects"

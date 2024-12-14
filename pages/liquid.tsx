@@ -1,4 +1,5 @@
 import { Header } from "@/components/bars/Header";
+import MainHeader from "@/components/bars/MainHeader";
 import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
 import { ContentHeader } from "@/components/content/ContentHeader";
@@ -6,7 +7,7 @@ import { ContentHeader } from "@/components/content/ContentHeader";
 const Liquid = () => {
   return (
     <div>
-      <Header />
+      <MainHeader opacity={1} />
       <ContentContainer>
         <ContentHeader
           title="Liquid Relationships"

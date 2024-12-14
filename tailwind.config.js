@@ -36,6 +36,17 @@ module.exports = {
       },
       animation: {
         "fade-in": "fade-in 1.5s linear var(--fade-delay) forwards",
+        pulseGlow: "pulseGlow 3s ease-in-out infinite",
+      },
+      pulseGlow: {
+        "0%, 100%": {
+          textShadow:
+            "0 0 10px rgba(58, 168, 193, 0.6), 0 0 30px rgba(58, 168, 193, 0.4)",
+        },
+        "50%": {
+          textShadow:
+            "0 0 20px rgba(58, 168, 193, 0.8), 0 0 50px rgba(58, 168, 193, 0.6)",
+        },
       },
     },
   },
