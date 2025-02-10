@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FC } from "react";
 import { Cinzel_Decorative, Poppins, Roboto, Spectral } from "next/font/google";
-import { urbanist } from "../cards/GridCard";
 import Image from "next/image";
 
 type MainHeaderProps = {
