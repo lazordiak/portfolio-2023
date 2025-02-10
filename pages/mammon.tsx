@@ -12,7 +12,9 @@ const Mammon = () => {
       <MainHeader opacity={1} />
       <ContentContainer>
         <div className="flex flex-col gap-4 mt-24">
-          <h1 className={`${metal.className} text-8xl`}>MAMMON.exe</h1>
+          <h1 className={`${metal.className} text-6xl lg:text-8xl`}>
+            MAMMON.exe
+          </h1>
           <h2 className={`text-xl ${fragMono.className}`}>
             Interactive installation where supplicants can commune with the Gods
             of Consumption. Presented through{" "}
@@ -106,13 +108,16 @@ const Mammon = () => {
         >
           <span className="lg:text-4xl text-3xl font-semibold">Mechanisms</span>
           <div className="">
-            The installation consists of three parts: <br></br>-{" "}
+            The installation consists of three parts: <br></br>
+            <br></br>-{" "}
             <span className="font-semibold">An altar to each god</span>, where
-            supplicants can leave offerings <br></br>-{" "}
+            supplicants can leave offerings <br></br>
+            <br></br>-{" "}
             <span className="font-semibold">
               A projected image above the altars
             </span>
             , which changes to reflect the god currently being communed with{" "}
+            <br></br>
             <br></br>-{" "}
             <span className="font-semibold">A website, MAMMON.exe</span>,
             reached through scanning barcodes on the altars, which will summon
