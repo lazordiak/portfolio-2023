@@ -1,7 +1,5 @@
-import { Header } from "@/components/bars/Header";
 import MainHeader, { spectral } from "@/components/bars/MainHeader";
-import { fragmentMono, urbanist } from "@/components/cards/GridCard";
-import Image from "next/image";
+import { fragmentMono } from "@/components/cards/GridCard";
 
 export default function About() {
   return (
