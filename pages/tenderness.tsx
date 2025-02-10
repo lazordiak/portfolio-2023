@@ -39,12 +39,12 @@ const Tenderness = () => {
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption=""
-            photoPath="DOT4.JPG"
+            photoPath="DOT4.jpg"
           />
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption=""
-            photoPath="DOT5.JPG"
+            photoPath="DOT5.jpg"
           />
         </div>
         <div className="mt-24 flex-col text-lg flex">
@@ -69,7 +69,7 @@ const Tenderness = () => {
           <MainContentCard
             altText="An image of my project Liquid Relationships"
             caption=""
-            photoPath="DOT7.JPG"
+            photoPath="DOT7.jpg"
           />
           <MainContentCard
             altText="An image of my project Liquid Relationships"
