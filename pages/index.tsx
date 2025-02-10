@@ -55,6 +55,14 @@ export default function Home() {
         >
           <GridCard
             size={1}
+            title="MAMMON.exe"
+            type="Interactive Installation"
+            link="/mammon"
+            caption="MAMMON.exe is an interactive installation where supplicants can visit the altars of the gods of consumption and commune with them in an attempt to win their favor. A custom web app connects to an Unreal Engine project and interfaces with ChatGPT to generate unique, tailored experiences for each supplicant."
+            img="/MammonFinal(1).jpg"
+          />
+          <GridCard
+            size={1}
             title="Forager"
             type="VR Film"
             link="/forager"
