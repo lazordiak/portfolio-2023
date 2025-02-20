@@ -1,8 +1,8 @@
 import MainHeader from "@/components/bars/MainHeader";
 import { MainContentCard } from "@/components/cards/MainContentCards";
 import { ContentContainer } from "@/components/containers/ContentContainer";
-import { ContentHeader } from "@/components/content/ContentHeader";
-import { fragMono, metal, spectral } from "@/utils/fonts";
+import { fragMono, metal } from "@/utils/fonts";
+import { projectInfoStyle } from "@/utils/sharedStyles";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,9 +28,7 @@ const Mammon = () => {
           width={1920}
           height={1264}
         />
-        <div
-          className={`${fragMono.className} mt-24 flex-col text-lg gap-6 lg:gap-12 flex`}
-        >
+        <div className={projectInfoStyle}>
           <span className="lg:text-4xl text-3xl font-semibold">Concept</span>
           <span className="">
             MAMMON.exe is an interactive installation commissioned for
@@ -63,9 +61,7 @@ const Mammon = () => {
             photoPath="Hafoff(1).jpg"
           />
         </div>
-        <div
-          className={`${fragMono.className} mt-24 flex-col gap-6 lg:gap-12 text-lg flex`}
-        >
+        <div className={projectInfoStyle}>
           <span className="lg:text-4xl text-3xl font-semibold">Story</span>
           <div className="">
             Consumption is presented as a panacea to all things. Does your back
@@ -103,9 +99,7 @@ const Mammon = () => {
           height={1920}
           width={1280}
         />
-        <div
-          className={`${fragMono.className} my-24 flex-col text-lg flex flex-col gap-6 lg:gap-12`}
-        >
+        <div className={projectInfoStyle}>
           <span className="lg:text-4xl text-3xl font-semibold">Mechanisms</span>
           <div className="">
             The installation consists of three parts: <br></br>
@@ -152,9 +146,7 @@ const Mammon = () => {
           className="mt-12"
           alt="A picture of Mammon"
         ></Image>
-        <div
-          className={`${fragMono.className} my-24 flex-col text-lg flex flex-col gap-6 lg:gap-12`}
-        >
+        <div className={projectInfoStyle}>
           <div className="">
             While partaking in communion, the selected god is
             &apos;summoned&apos; into the sacred device, where the supplicant

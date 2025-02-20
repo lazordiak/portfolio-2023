@@ -148,6 +148,7 @@ export const HomeScreen = () => {
       <div className={shaderContainerStyle}>
         {true && (
           <motion.div
+            className="w-full h-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}

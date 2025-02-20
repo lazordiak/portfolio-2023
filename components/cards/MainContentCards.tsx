@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface MainCardProps {
   altText: string;
-  caption: string;
+  caption?: string;
   photoPath: string;
 }
 
@@ -14,11 +14,11 @@ export const MainContentCard: React.FC<MainCardProps> = ({
   return (
     <div className={"flex flex-col relative"}>
       <img
-        className="rounded border-solid border-2 object-contain"
+        className="rounded border-solid object-contain"
         alt={altText}
         src={`/${photoPath}`}
       />
-      <div className={"mt-6 italic"}>{caption}</div>
+      {caption && <div className={"mt-6 italic"}>{caption}</div>}
     </div>
   );
 };
