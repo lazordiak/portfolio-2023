@@ -16,6 +16,15 @@ import MainHeader, { cinzel } from "@/components/bars/MainHeader";
 import GridCard from "@/components/cards/GridCard";
 import Ball from "@/components/effects/GlowingBall";
 import { Footer } from "@/components/bars/Footer";
+import {
+  amatic,
+  arvo,
+  lovers,
+  metal,
+  poiretOne,
+  qwytcher,
+  uncia,
+} from "@/utils/fonts";
 
 export default function Home() {
   const shaderIndex = useAppSelector((state) => state.shaderIndex);
@@ -55,6 +64,7 @@ export default function Home() {
         >
           <GridCard
             size={1}
+            font={metal.className}
             title="MAMMON.exe"
             type="Interactive Installation"
             link="/mammon"
@@ -63,6 +73,7 @@ export default function Home() {
           />
           <GridCard
             size={1}
+            font={amatic.className}
             title="Forager"
             type="VR Film"
             link="/forager"
@@ -71,6 +82,7 @@ export default function Home() {
           />
           <GridCard
             size={1}
+            font={poiretOne.className}
             title="Wherever You Go"
             type="Short-form VR Experience"
             link="/thesis"
@@ -79,6 +91,7 @@ export default function Home() {
           />
           <GridCard
             size={1}
+            font={lovers.className}
             title="Department of Tenderness"
             type="Participatory Installation"
             link="/tenderness"
@@ -87,6 +100,7 @@ export default function Home() {
           />
           <GridCard
             size={1}
+            font={uncia.className}
             title="Stone Stories"
             type="AR Installation"
             link="https://devpost.com/software/stone-stories"

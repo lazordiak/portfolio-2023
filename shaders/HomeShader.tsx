@@ -28,8 +28,10 @@ float getGlow(vec2 pos, float seed){
 }
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
-   vec2 uv = fragCoord / iResolution.xy;
-  uv.y *= iResolution.y / iResolution.x; // Correct aspect ratio
+   vec2 aspect = vec2(iResolution.x / iResolution.y, 1.0);
+vec2 uv = fragCoord / iResolution.xy; // Normalized UV (0 to 1)
+uv.x = (uv.x - 0.5) * aspect.x + 0.5; // Apply aspect ratio correction only to X
+uv *= 0.5;
 
     vec3 col = vec3(0.0);
 

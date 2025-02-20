@@ -11,6 +11,7 @@ type GridCardProps = {
   title: string;
   link: string;
   size?: number;
+  font?: string;
 };
 
 export const urbanist = Urbanist({
@@ -32,6 +33,7 @@ const GridCard: FC<GridCardProps> = ({
   type,
   link,
   size,
+  font,
 }) => {
   return (
     <div className="flex rounded flex-col mb-12">
@@ -49,15 +51,15 @@ const GridCard: FC<GridCardProps> = ({
         <Link href={link}>
           <p
             className={`font-bold ${
-              size && size > 0 ? "text-4xl" : "text-3xl"
-            } my-4 ${cinzel.className}`}
+              size && size > 0 ? "text-5xl" : "text-3xl"
+            } my-4 ${font ? font : cinzel.className}`}
           >
             {title}
           </p>
         </Link>
         {type && (
           <p
-            className={`${spectral.className} ${
+            className={`${spectral.className} opacity-70 ${
               size && size > 0 ? "text-md" : "text-sm"
             }`}
           >
