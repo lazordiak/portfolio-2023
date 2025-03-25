@@ -39,12 +39,25 @@ const GridCard: FC<GridCardProps> = ({
     <div className="flex rounded flex-col mb-12">
       <Link href={link}>
         <div className="relative w-full" style={{ paddingBottom: "70.25%" }}>
-          <Image
-            fill
-            alt={title}
-            src={img}
-            className="absolute rounded-sm top-0 left-0 w-full h-full object-cover"
-          />
+          {img.includes("mp4") ? (
+            <video
+              className="absolute rounded-sm top-0 left-0 w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={img} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <Image
+              fill
+              alt={title}
+              src={img}
+              className="absolute rounded-sm top-0 left-0 w-full h-full object-cover"
+            />
+          )}
         </div>
       </Link>
       <div className="text-snow mt-4 flex flex-col gap-4">

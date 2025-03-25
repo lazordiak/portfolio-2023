@@ -78,7 +78,7 @@ export default function Home() {
             type="VR Film"
             link="/forager"
             caption="Forager is a VR film where you live out the lifecycle of a mushroom. You start as a spore, grow into a mycelium network, and finally fruit into a mushroom. The film is a meditation on the interconnectedness of life and the beauty of decay, and uses volumetric time-lapse capture of growing mushrooms to render them as point clouds within Unreal Engine."
-            img="/ForagerGifSmall.gif"
+            img="/ForagerVid.mp4"
           />
           <GridCard
             size={1}
@@ -87,7 +87,7 @@ export default function Home() {
             type="Short-form VR Experience"
             link="/thesis"
             caption="In 'Wherever You Go', participants are placed into a blank virtual world and tasked with exploring until they find a place they resonate with. The environment in 'Wherever You Go' grows and changes depending on the directions people travel through it, cycling between four interrelated biomes."
-            img="/WhereUGoGifSmall.gif"
+            img="/WhereUGoVid.mp4"
           />
           <GridCard
             size={1}
@@ -96,7 +96,7 @@ export default function Home() {
             type="Participatory Installation"
             link="/tenderness"
             caption="The Department of Tenderness (DOT) is a speculative bureaucratic agency tasked with overseeing the maintenance and promotion of love and tenderness within New York City. As the DOT, we put on public events and installations designed to investigate the role of bureaucracy and love in urban design."
-            img="/DOTGifSmall.gif"
+            img="/DOTVid.mp4"
           />
           <GridCard
             size={1}
@@ -105,7 +105,7 @@ export default function Home() {
             type="AR Installation"
             link="https://devpost.com/software/stone-stories"
             caption="'Stone Stories' is an augmented reality app where users start communal cairns in places of personal significance. Other people can come and add to the cairn or view things that have been placed there before, leading to impromptu public sculptures. MIT Reality Hack winner 2022."
-            img="/StoneStoriesGifSmall.gif"
+            img="/StoneStoriesVid.mp4"
           />
         </motion.div>
         <motion.h3
