@@ -9,6 +9,7 @@ import {
   Qwitcher_Grypen,
   Roboto,
   Spectral,
+  Sunshiney,
   Uncial_Antiqua,
 } from "next/font/google";
 
@@ -69,6 +70,12 @@ export const uncia = Uncial_Antiqua({
 });
 
 export const poiretOne = Poiret_One({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+});
+
+export const sunshiney = Sunshiney({
   weight: "400",
   style: "normal",
   subsets: ["latin"],

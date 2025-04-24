@@ -4,7 +4,7 @@ import { HomeScreen } from "@/components/screens/HomeScreen";
 import { PageTracker } from "@/components/buttons/PageTracker";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ShaderScreen } from "@/components/screens/ShaderScreen";
 import LiquidShader from "@/shaders/LiquidShader";
 import ThesisShader from "@/shaders/ThesisShader";
@@ -12,27 +12,23 @@ import WeatherShader from "@/shaders/WeatherShader";
 import JournalsShader from "@/shaders/JournalsShader";
 import ForagerShader from "@/shaders/ForagerShader";
 import HackathonShader from "@/shaders/HackathonShader";
-import MainHeader, { cinzel } from "@/components/bars/MainHeader";
+import MainHeader from "@/components/bars/MainHeader";
 import GridCard from "@/components/cards/GridCard";
-import Ball from "@/components/effects/GlowingBall";
-import { Footer } from "@/components/bars/Footer";
 import {
   amatic,
-  arvo,
+  cinzel,
   lovers,
   metal,
   poiretOne,
   qwytcher,
+  sunshiney,
   uncia,
 } from "@/utils/fonts";
+import { Footer } from "@/components/bars/Footer";
 
 export default function Home() {
   const shaderIndex = useAppSelector((state) => state.shaderIndex);
   useShaderUpdater();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const [presStyle, setPresStyle] = useState<number>(0);
 
@@ -106,6 +102,15 @@ export default function Home() {
             link="https://devpost.com/software/stone-stories"
             caption="'Stone Stories' is an augmented reality app where users start communal cairns in places of personal significance. Other people can come and add to the cairn or view things that have been placed there before, leading to impromptu public sculptures. MIT Reality Hack winner 2022."
             img="/StoneStoriesVid.mp4"
+          />
+          <GridCard
+            size={1}
+            font={sunshiney.className}
+            title="Spiritwood"
+            type="AR Installation"
+            link="/spiritwood"
+            caption="An immersive installation exploring the intersection of nature and spirituality through interactive technology. Visitors can discover and interact with different types of nature spirits hidden around MIT's campus, leaving offerings to receive their blessings."
+            img="/spirits/Spirits8.JPG"
           />
         </motion.div>
         <motion.h3
