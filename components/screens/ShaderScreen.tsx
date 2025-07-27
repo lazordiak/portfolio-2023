@@ -1,7 +1,7 @@
 import LiquidShader from "@/shaders/LiquidShader";
 import { shaderContainerStyle } from "@/styles/constants";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 import SplitScreenContainer from "./SplitScreen";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ type ShaderScreenProps = {
   pageRef: string;
   title: string;
   blurb: string;
-  shaderComp: JSX.Element;
+  shaderComp: ReactElement;
   presStyle: number;
   img: string;
   keywords?: string[];

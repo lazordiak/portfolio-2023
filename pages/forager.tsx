@@ -7,6 +7,7 @@ import { amatic, fragMono } from "@/utils/fonts";
 import { projectInfoStyle } from "@/utils/sharedStyles";
 import Image from "next/image";
 import Link from "next/link";
+import LazyVideo from "@/components/media/LazyVideo";
 
 const Forager = () => {
   return (
@@ -28,14 +29,14 @@ const Forager = () => {
         </div>
         <div className="w-full mt-24">
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
-            <video
-              controls
-              width="100%"
-              height="100%"
+            <LazyVideo
               src="/ForagerCut.mp4"
               title="Forager"
+              controls
               style={{ position: "absolute", top: 0, left: 0 }}
-            ></video>
+              width="100%"
+              height="100%"
+            />
           </div>
         </div>
         <div className={projectInfoStyle}>

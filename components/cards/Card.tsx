@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { memo } from "react";
 
 interface CardProps {
   altText: string;
@@ -25,10 +26,13 @@ export const Card: React.FC<CardProps> = ({
           {title}
         </div>
         <div>
-          <img
+          <Image
             className="mt-6 rounded border-solid border-2 object-contain"
             alt={altText}
             src={`/${photoPath}`}
+            width={600}
+            height={400}
+            style={{ width: '100%', height: 'auto' }}
           />
           <div className="mt-6">{caption}</div>
         </div>
@@ -36,3 +40,5 @@ export const Card: React.FC<CardProps> = ({
     </div>
   );
 };
+
+export const MemoizedCard = memo(Card);

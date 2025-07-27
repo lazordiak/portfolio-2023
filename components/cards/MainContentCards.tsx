@@ -13,10 +13,13 @@ export const MainContentCard: React.FC<MainCardProps> = ({
 }) => {
   return (
     <div className={"flex flex-col relative"}>
-      <img
+      <Image
         className="rounded border-solid object-contain"
         alt={altText}
         src={`/${photoPath}`}
+        width={600}
+        height={400}
+        style={{ width: '100%', height: 'auto' }}
       />
       {caption && <div className={"mt-6 italic"}>{caption}</div>}
     </div>

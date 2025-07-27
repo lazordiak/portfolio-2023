@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FC } from "react";
+import Image from "next/image";
 
 type SplitScreenContainerProps = {
   title: string;
@@ -44,9 +45,13 @@ const SplitScreenContainer: FC<SplitScreenContainerProps> = ({
           </div>
         </div>
         <div className="flex flex-1 ml-4">
-          <img
+          <Image
             className="object-cover rounded border border-1-snow flex-1 flex"
             src={img}
+            alt={title}
+            width={600}
+            height={400}
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
       </Link>

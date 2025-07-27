@@ -2,6 +2,11 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./reduxHooks";
 import { updateShaderIndex } from "@/store/slice";
 
+/**
+ * Custom hook that manages shader index navigation via keyboard and touch events.
+ * Handles arrow key navigation and swipe gestures to cycle through shader screens.
+ * Updates Redux state to track current shader index (0-6).
+ */
 export const useShaderUpdater = (): void => {
   const shaderIndex = useAppSelector((state) => state.shaderIndex);
   const dispatch = useAppDispatch();

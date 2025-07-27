@@ -1,0 +1,25 @@
+# robots.txt for schuylerdevos.com
+
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /about
+Allow: /contact
+Allow: /mammon
+Allow: /forager
+Allow: /thesis
+Allow: /tenderness
+Allow: /spiritwood
+Allow: /liquid
+Allow: /weather
+Allow: /journals
+Allow: /hackathons
+
+# Block large media files from crawling
+Disallow: /*.mp4$
+Disallow: /*.MOV$
+Disallow: /*.gif$
+
+# Sitemap location
+Sitemap: https://schuylerdevos.com/sitemap.xml

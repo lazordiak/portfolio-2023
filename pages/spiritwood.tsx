@@ -3,6 +3,7 @@ import { ContentContainer } from "@/components/containers/ContentContainer";
 import { fragMono, sunshiney } from "@/utils/fonts";
 import { projectInfoStyle } from "@/utils/sharedStyles";
 import Image from "next/image";
+import LazyVideo from "@/components/media/LazyVideo";
 
 const Spiritwood = () => {
   return (
@@ -21,14 +22,13 @@ const Spiritwood = () => {
 
         {/* Hero Video Section */}
         <div className="mt-24 relative aspect-video w-full overflow-hidden rounded-lg shadow-xl">
-          <video
-            className="w-full h-full object-cover"
-            controls
+          <LazyVideo
+            src="/spirits/SpiritVid1.mp4"
             poster="/spirits/Spirits1.JPG"
-          >
-            <source src="/spirits/SpiritVid1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            className="w-full h-full"
+            controls
+            title="Spiritwood - AR Forest Spirits Installation"
+          />
         </div>
 
         <div className={projectInfoStyle}>
@@ -83,10 +83,12 @@ const Spiritwood = () => {
 
         {/* Second Video Section */}
         <div className="mt-24 relative aspect-video w-full overflow-hidden rounded-lg shadow-xl">
-          <video className="w-full h-full object-cover" controls>
-            <source src="/spirits/SpiritsVid2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <LazyVideo
+            src="/spirits/SpiritsVid2.mp4"
+            className="w-full h-full"
+            controls
+            title="Spiritwood - AR Interaction Demo"
+          />
         </div>
 
         <div className={projectInfoStyle}>

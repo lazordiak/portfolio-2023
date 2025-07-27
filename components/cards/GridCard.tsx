@@ -1,8 +1,9 @@
 import { Cinzel, Fragment_Mono, Urbanist } from "next/font/google";
-import { FC } from "react";
+import { FC, useState, memo } from "react";
 import { cinzel, spectral } from "../bars/MainHeader";
 import Image from "next/image";
 import Link from "next/link";
+import LazyVideo from "@/components/media/LazyVideo";
 
 type GridCardProps = {
   img: string;
@@ -35,29 +36,44 @@ const GridCard: FC<GridCardProps> = ({
   size,
   font,
 }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div className="flex rounded flex-col mb-12">
       <Link href={link}>
         <div className="relative w-full" style={{ paddingBottom: "70.25%" }}>
+          {/* Loading skeleton */}
+          {!imageLoaded && !imageError && (
+            <div className="absolute rounded-sm top-0 left-0 w-full h-full bg-gray-800 animate-pulse" />
+          )}
+          
           {img.includes("mp4") ? (
-            <video
-              className="absolute rounded-sm top-0 left-0 w-full h-full object-cover"
+            <LazyVideo
+              src={img}
+              className="rounded-sm object-cover"
+              fill
               autoPlay
               loop
               muted
-              playsInline
-            >
-              <source src={img} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              title={title}
+              onLoad={() => setImageLoaded(true)}
+              onError={() => setImageError(true)}
+            />
           ) : (
             <Image
               fill
               alt={title}
               src={img}
               className="absolute rounded-sm top-0 left-0 w-full h-full object-cover"
+              loading="lazy"
+              onLoad={() => setImageLoaded(true)}
+              onError={() => setImageError(true)}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           )}
+          
+          {/* Error state handled by LazyVideo component for videos */}
         </div>
       </Link>
       <div className="text-snow mt-4 flex flex-col gap-4">
@@ -91,4 +107,4 @@ const GridCard: FC<GridCardProps> = ({
   );
 };
 
-export default GridCard;
+export default memo(GridCard);

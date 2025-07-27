@@ -1,10 +1,12 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
-import HomeShader from "@/shaders/HomeShader";
+import LazyShader from "@/components/common/LazyShader";
 import { setToLoaded } from "@/store/slice";
 import { shaderContainerStyle } from "@/styles/constants";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Spectral } from "next/font/google";
+import ErrorBoundary from "@/components/common/ErrorBoundary";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const spectral = Spectral({
   weight: "400",
@@ -12,24 +14,46 @@ const spectral = Spectral({
   subsets: ["latin"],
 });
 
-export const HomeScreen = () => {
+interface HomeScreenProps {}
+
+/**
+ * HomeScreen component that displays the main landing page with animated name reveal
+ * and background shader effects. Manages loading state and triggers animations.
+ */
+export const HomeScreen: React.FC<HomeScreenProps> = () => {
   const [nameFaded, setNameFaded] = useState(false);
   const hasLoaded = useAppSelector((state) => state.hasLoaded);
   const dispatch = useAppDispatch();
+  const prefersReducedMotion = useReducedMotion();
+
+  const loadingSettings = useMemo(() => ({
+    loadingTime: prefersReducedMotion ? 1000 : 9000,
+    fadeTime: prefersReducedMotion ? 100 : 4500,
+  }), [prefersReducedMotion]);
+
+  const triggerLoaded = useCallback(() => {
+    dispatch(setToLoaded());
+  }, [dispatch]);
+
+  const triggerNameFade = useCallback(() => {
+    setNameFaded(true);
+  }, []);
 
   useEffect(() => {
     if (!hasLoaded) {
-      setTimeout(() => dispatch(setToLoaded()), 9000);
+      const timer = setTimeout(triggerLoaded, loadingSettings.loadingTime);
+      return () => clearTimeout(timer);
     }
-  }, [dispatch, hasLoaded]);
+  }, [hasLoaded, loadingSettings.loadingTime, triggerLoaded]);
 
   useEffect(() => {
     if (!hasLoaded && !nameFaded) {
-      setTimeout(() => setNameFaded(true), 4500);
+      const timer = setTimeout(triggerNameFade, loadingSettings.fadeTime);
+      return () => clearTimeout(timer);
     } else {
       setNameFaded(true);
     }
-  }, [hasLoaded, nameFaded, dispatch]);
+  }, [hasLoaded, nameFaded, loadingSettings.fadeTime, triggerNameFade]);
 
   return (
     <motion.div
@@ -146,16 +170,20 @@ export const HomeScreen = () => {
       </main>
 
       <div className={shaderContainerStyle}>
-        {true && (
+        <ErrorBoundary
+          fallback={
+            <div className="w-full h-full bg-black opacity-50" />
+          }
+        >
           <motion.div
             className="w-full h-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <HomeShader />
+            <LazyShader />
           </motion.div>
-        )}
+        </ErrorBoundary>
       </div>
     </motion.div>
   );
